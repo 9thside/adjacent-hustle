@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adjacent Hustle Consulting — Change Management & Org Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+
+  <style>
+    /* ── Nav: transparent over dark hero ── */
+    nav .logo-company { color: var(--white); }
+    nav .logo-tag     { color: rgba(255,255,255,0.45); }
+    nav .nav-links a  { color: rgba(255,255,255,0.55); }
+    nav .nav-links a:hover { color: var(--white); }
+    nav .nav-cta      { background: rgba(255,255,255,0.12) !important; color: var(--white) !important; border: 1px solid rgba(255,255,255,0.2); }
+    nav .nav-cta:hover { background: var(--white) !important; color: var(--navy) !important; }
+
+    nav.scrolled { background: rgba(10,16,40,0.92) !important; }
+    nav.scrolled .logo-company { color: var(--white); }
+    nav.scrolled .logo-tag     { color: var(--teal-light); }
+    nav.scrolled .nav-links a  { color: rgba(255,255,255,0.55); }
+    nav.scrolled .nav-links a:hover { color: var(--white); }
+    nav.scrolled .nav-cta { background: var(--teal) !important; color: var(--white) !important; border-color: transparent; }
+
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+    /* ── HERO ── */
+    .hero-dark h1 {
+      font-size: clamp(40px, 7vw, 92px);
+    }
+
+    /* ── PHOTO TRIO ── */
+    .photo-trio-section {
+      background: var(--navy);
+      padding: 0 64px 80px;
+    }
+    .photo-trio {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      height: 520px; /* uniform height — all photos same size */
+    }
+    .photo-trio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.05);
+      /* no aspect-ratio — height is driven by parent grid */
+    }
+    .photo-trio-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      filter: brightness(0.88) saturate(0.9);
+    }
+    .photo-trio-item:hover img { transform: scale(1.04); filter: brightness(0.95) saturate(1); }
+    .photo-trio-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 40px 20px 20px;
+      background: linear-gradient(to top, rgba(8,14,31,0.85) 0%, transparent 100%);
+      font-size: 12px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ── CTA with photo ── */
+    .cta-photo {
+      position: relative;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .cta-photo-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .cta-photo-bg img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      filter: brightness(0.35) saturate(0.6);
+    }
+    .cta-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(8,14,31,0.7) 0%, rgba(43,181,181,0.15) 100%);
+      z-index: 1;
+    }
+    .cta-photo-inner {
+      position: relative;
+      z-index: 2;
+      padding: 80px 40px;
+    }
+    .cta-photo h2 {
+      color: var(--white);
+      font-size: clamp(36px, 5vw, 68px);
+      margin-bottom: 16px;
+    }
+    .cta-photo p {
+      color: rgba(255,255,255,0.6);
+      font-size: 18px;
+      max-width: 440px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    /* ── CREDIBILITY STRIP ── */
+    .cred-strip {
+      background: #0a1228;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 18px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .cred-quote {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      flex: 1;
+    }
+    .cred-qmark {
+      font-size: 36px;
+      color: var(--teal);
+      line-height: 0.9;
+      font-family: Georgia, serif;
+      flex-shrink: 0;
+      opacity: 0.8;
+    }
+    .cred-quote-text {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      font-style: italic;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+    .cred-quote-text strong { color: rgba(255,255,255,0.85); font-style: normal; font-weight: 600; }
+    .cred-divider {
+      width: 1px; height: 32px;
+      background: rgba(255,255,255,0.1);
+      flex-shrink: 0;
+    }
+    .cred-tags {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-shrink: 0;
+    }
+    .cred-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+      padding: 0 10px;
+    }
+    .cred-tag + .cred-tag { border-left: 1px solid rgba(255,255,255,0.1); }
+
+    /* ── STATEMENT SPLIT ── */
+    .stmt-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 580px;
+      background: #fff;
+    }
+    .stmt-split-text {
+      padding: 80px 64px 80px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .stmt-problem-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--teal);
+      margin-bottom: 24px;
+    }
+    .stmt-line-1 {
+      font-size: clamp(24px, 3vw, 42px);
+      font-weight: 800;
+      color: rgba(8,14,31,0.55);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .stmt-line-2 {
+      font-size: clamp(26px, 3.2vw, 46px);
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      border-left: 4px solid var(--teal);
+      padding-left: 20px;
+      margin-bottom: 28px;
+    }
+    .stmt-body {
+      font-size: 16px;
+      line-height: 1.75;
+      color: rgba(8,14,31,0.55);
+      max-width: 400px;
+      margin-bottom: 36px;
+    }
+    .stmt-split-img {
+      position: relative;
+      overflow: visible;
+    }
+    .stmt-split-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      filter: brightness(0.82) saturate(0.85);
+    }
+    .stmt-stat-card {
+      position: absolute;
+      bottom: 48px;
+      left: -44px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 22px 26px;
+      box-shadow: 0 24px 64px rgba(8,14,31,0.18), 0 2px 8px rgba(8,14,31,0.06);
+      width: 210px;
+      z-index: 2;
+    }
+    .stmt-stat-num {
+      font-size: 56px;
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+    .stmt-stat-num em { color: var(--teal); font-style: normal; }
+    .stmt-stat-label {
+      font-size: 12px;
+      color: rgba(8,14,31,0.55);
+      line-height: 1.45;
+      margin-top: 8px;
+    }
+    .stmt-stat-source {
+      font-size: 9px;
+      color: rgba(8,14,31,0.3);
+      margin-top: 6px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .photo-trio-section { padding: 0 32px 64px; }
+      .photo-trio { height: 420px; }
+      .cred-strip { padding: 16px 32px; gap: 20px; }
+      .cred-tags { display: none; }
+      .stmt-split { grid-template-columns: 1fr; }
+      .stmt-split-text { padding: 64px 48px; }
+      .stmt-split-img { min-height: 400px; overflow: hidden; }
+      .stmt-stat-card { left: 24px; bottom: 24px; }
+    }
+
+    @media (max-width: 640px) {
+      /* Hero */
+      .hero-dark {
+        padding: 120px 24px 100px;
+        justify-content: flex-start;
+        min-height: 100svh;
+      }
+      .hero-dark h1 { font-size: clamp(36px, 10vw, 56px); margin-bottom: 20px; }
+      .hero-dark .hero-sub { font-size: 15px; margin-bottom: 32px; }
+      .hero-eyebrow { font-size: 9px; letter-spacing: 0.14em; margin-bottom: 24px; }
+      .btn-pill { padding: 13px 24px; font-size: 14px; }
+      .hero-actions { gap: 12px; }
+
+      /* Cred strip */
+      .cred-strip { padding: 14px 24px; }
+      .cred-qmark { font-size: 28px; }
+      .cred-quote-text { font-size: 12px; }
+
+      /* Statement split */
+      .stmt-split-text { padding: 52px 24px; }
+      .stmt-line-1 { font-size: clamp(22px, 7vw, 32px); }
+      .stmt-line-2 { font-size: clamp(24px, 7.5vw, 36px); padding-left: 16px; }
+      .stmt-body { font-size: 15px; }
+      .stmt-split-img { min-height: 300px; }
+      .stmt-stat-card { left: 16px; bottom: 16px; width: 180px; padding: 16px 20px; }
+      .stmt-stat-num { font-size: 44px; }
+
+      /* Photo trio → horizontal scroll carousel */
+      .photo-trio-section { padding: 0 0 48px; }
+      .photo-trio {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 10px;
+        height: 360px;
+        padding: 0 24px;
+      }
+      .photo-trio::-webkit-scrollbar { display: none; }
+      .photo-trio-item {
+        flex: 0 0 78vw;
+        max-width: 320px;
+        scroll-snap-align: start;
+        border-radius: 14px;
+      }
+      .photo-trio-item:last-child { margin-right: 24px; }
+
+      /* CTA photo */
+      .cta-photo { min-height: 440px; }
+      .cta-photo-inner { padding: 60px 24px; }
+
+      /* Services */
+      .svc-list-section { padding: 64px 24px; }
+      .svc-list-header { margin-bottom: 40px; }
+      .svc-row { grid-template-columns: 48px 1fr; gap: 12px; }
+      .svc-arrow { display: none; }
+      .svc-info h3 { font-size: 16px; }
+      .svc-info p { display: none; }
+
+      /* Impact */
+      .impact-strip { padding: 64px 24px; }
+      .impact-num { font-size: clamp(52px, 16vw, 80px); }
+
+      /* Methodology teaser */
+      .method-teaser-section { padding: 64px 24px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────────── -->
+  <nav id="nav">
+    <a href="/" class="nav-logo">
+      <svg width="40" height="40" viewBox="0 0 46 46" fill="none">
+        <rect width="46" height="46" rx="10" fill="url(#ng)"/>
+        <path d="M14 23 L21 14 L28 23 L21 32 Z" fill="white" opacity="0.9"/>
+        <path d="M18 23 L25 14 L32 23 L25 32 Z" fill="white" opacity="0.5"/>
+        <path d="M21 18 L25 14 L28 18 L25 22 Z" fill="white" opacity="0.35"/>
+        <defs><linearGradient id="ng" x1="0" y1="0" x2="46" y2="46"><stop offset="0%" stop-color="#2BB5B5"/><stop offset="50%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#0F2251"/></linearGradient></defs>
+      </svg>
+      <div class="logo-text-block">
+        <span class="logo-company">Adjacent Hustle</span>
+        <span class="logo-tag">Org Design · Change Management · Transformation</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/methodology.html">Our Approach</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html" class="nav-cta">Let's Talk</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <div class="hero-dark">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <p class="hero-eyebrow">
+      <span></span> Adjacent Hustle Consulting <span></span> Toronto, Canada
+    </p>
+
+    <h1 data-split data-split-delay="0.1">
+      Turn transformation into clarity and execution.
+    </h1>
+
+    <p class="hero-sub" style="animation: fadeInUp 0.8s 0.75s ease both; opacity:0;">
+      We partner with CEOs and Senior Executive teams to plan, communicate, and land complex organizational change. Backed by data, executed without leakage.
+    </p>
+
+    <div class="hero-actions" style="animation: fadeInUp 0.8s 0.95s ease both; opacity:0;">
+      <a href="/contact.html" class="btn-pill btn-pill-light btn-magnetic">Schedule a Consultation</a>
+      <a href="/methodology.html" class="btn-pill btn-pill-ghost btn-magnetic">See How We Work →</a>
+    </div>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap" style="position:absolute; bottom:0; left:0; right:0;">
+      <div class="marquee-track">
+        <div class="marquee-item">Fractional Leadership <span class="marquee-dot"></span></div>
+        <div class="marquee-item">Executive Advisory <span class="marquee-dot"></span></div>
+        <div class="marquee-item">M&amp;A Integration <span class="marquee-dot"></span></div>
+        <div class="marquee-item">Org Design &amp; Effectiveness <span class="marquee-dot"></span></div>
+        <div class="marquee-item">People Operations <span class="marquee-dot"></span></div>
+        <div class="marquee-item">Change and Transformation <span class="marquee-dot"></span></div>
+        <div class="marquee-item">Fractional Leadership <span class="marquee-dot"></span></div>
+        <div class="marquee-item">Executive Advisory <span class="marquee-dot"></span></div>
+        <div class="marquee-item">M&amp;A Integration <span class="marquee-dot"></span></div>
+        <div class="marquee-item">Org Design &amp; Effectiveness <span class="marquee-dot"></span></div>
+        <div class="marquee-item">People Operations <span class="marquee-dot"></span></div>
+        <div class="marquee-item">Change and Transformation <span class="marquee-dot"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CREDIBILITY STRIP ────────────────────────────────────── -->
+  <div class="cred-strip">
+    <div class="cred-quote">
+      <span class="cred-qmark">"</span>
+      <p class="cred-quote-text">
+        "Niruja supported HR work for a complex amalgamation project that I was leading. She was knowledgeable, organized, hard-working, flexible and decisive. She had an excellent ability of quickly assessing needs and was always solution-oriented. She always brought relevant recommendations to the decision-makers and delivered work on time while navigating changing project circumstances (as they always do). I appreciated her ongoing communication throughout the project and her risk assessment and mitigation approach."
+        — <strong>Joanie Bouchard</strong>, Chief Transformation Officer
+      </p>
+    </div>
+    <div class="cred-divider"></div>
+    <div class="cred-tags">
+      <span class="cred-tag">Financial Services</span>
+      <span class="cred-tag">Healthcare</span>
+      <span class="cred-tag">Technology</span>
+      <span class="cred-tag">Education</span>
+      <span class="cred-tag">Pharma</span>
+    </div>
+  </div>
+
+  <!-- ── CASE STUDIES (future) ────────────────────────────────── -->
+
+  <!-- ── BOLD STATEMENT ────────────────────────────────────────── -->
+  <div class="stmt-split">
+    <div class="stmt-split-text">
+      <p class="stmt-problem-tag reveal">The Problem</p>
+      <div class="stmt-line-1 reveal reveal-d1">Most strategies don't fail at the top.</div>
+      <div class="stmt-line-2 reveal reveal-d2">They leak in the middle.</div>
+      <p class="stmt-body reveal reveal-d3">
+        Adjacent Hustle was built for what happens between the board decision and the teams execution. Where strategy dissolves into ambiguity, conflicting priorities, and human friction.
+      </p>
+      <a href="/methodology.html" class="btn-primary btn-magnetic reveal reveal-d4">See How We Fix It →</a>
+    </div>
+    <div class="stmt-split-img reveal reveal-d1">
+      <img
+        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=82"
+        alt="Executive team in a strategy session"
+        loading="lazy"
+      />
+      <div class="stmt-stat-card">
+        <div class="stmt-stat-num">87<em>%</em></div>
+        <p class="stmt-stat-label">of change initiatives fail to meet their objectives</p>
+        <p class="stmt-stat-source">Prosci Research</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SERVICES ───────────────────────────────────────────────── -->
+  <section class="svc-list-section">
+    <div class="svc-list-header">
+      <div>
+        <div class="section-tag reveal">What We Do</div>
+        <h2 class="reveal reveal-d1">Services built for<br>transformation.</h2>
+      </div>
+      <p class="lead reveal reveal-d2" style="max-width:340px; font-size:16px;">
+        We handle the organizational work that requires both strategic clarity and the operational discipline to execute. Under real pressure, on real timelines.
+      </p>
+    </div>
+
+    <div class="svc-list">
+      <div class="svc-row reveal">
+        <span class="svc-n">01</span>
+        <div class="svc-info">
+          <h3>Organizational Design &amp; Effectiveness</h3>
+          <p>Design and land operating models that work.</p>
+        </div>
+        <div class="svc-arrow">→</div>
+      </div>
+      <div class="svc-row reveal reveal-d1">
+        <span class="svc-n">02</span>
+        <div class="svc-info">
+          <h3>People Operations</h3>
+          <p>Operational rigor for the people side.</p>
+        </div>
+        <div class="svc-arrow">→</div>
+      </div>
+      <div class="svc-row reveal reveal-d2">
+        <span class="svc-n">03</span>
+        <div class="svc-info">
+          <h3>Change and Transformation</h3>
+          <p>Comprehensive change delivery so transformation lands cleanly at every level.</p>
+        </div>
+        <div class="svc-arrow">→</div>
+      </div>
+      <div class="svc-row reveal reveal-d3">
+        <span class="svc-n">04</span>
+        <div class="svc-info">
+          <h3>M&amp;A Integration</h3>
+          <p>Bring stability and structure to complex integrations and divestitures</p>
+        </div>
+        <div class="svc-arrow">→</div>
+      </div>
+      <div class="svc-row reveal reveal-d4">
+        <span class="svc-n">05</span>
+        <div class="svc-info">
+          <h3>Executive Advisory</h3>
+          <p>Data-driven decision support: scenario modeling, risk flags, and sequenced next steps</p>
+        </div>
+        <div class="svc-arrow">→</div>
+      </div>
+      <div class="svc-row reveal reveal-d5">
+        <span class="svc-n">06</span>
+        <div class="svc-info">
+          <h3>Fractional Leadership</h3>
+          <p>Stabilize today and build future operating systems that sustain beyond the engagement</p>
+        </div>
+        <div class="svc-arrow">→</div>
+      </div>
+      <div class="svc-row reveal reveal-d5">
+        <span class="svc-n">07</span>
+        <div class="svc-info">
+          <h3>Workshops for Change Leaders</h3>
+          <p>Build and refine capabilities in your change leaders</p>
+        </div>
+        <div class="svc-arrow">→</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── IMPACT NUMBERS ────────────────────────────────────────── -->
+  <div class="impact-strip">
+    <div class="impact-item reveal">
+      <span class="impact-num impact-num-teal">15+</span>
+      <p class="impact-label">Years tackling organizational transformation</p>
+    </div>
+    <div class="impact-item reveal reveal-d2">
+      <span class="impact-num impact-num-purple">25+</span>
+      <p class="impact-label">Enterprise programs delivered</p>
+    </div>
+    <div class="impact-item reveal reveal-d4">
+      <span class="impact-num impact-num-white">6+</span>
+      <p class="impact-label">Industries navigated: Finance · Tech · Health · Education · Pharma · Not-For-Profit</p>
+    </div>
+  </div>
+
+  <!-- ── FOUNDER PREVIEW ───────────────────────────────────────── -->
+  <div class="founder-preview">
+    <div class="founder-photo-wrap reveal">
+      <img src="w/niruja.jpg" alt="Niruja Nagarajah, CEO — Adjacent Hustle Consulting" />
+    </div>
+    <div class="founder-content reveal reveal-d2">
+      <div class="section-tag">The Founder</div>
+      <blockquote>
+        "I built Adjacent Hustle because the gap between board decisions and the people leading them was too wide, and too costly, to leave unmanaged."
+      </blockquote>
+      <span class="founder-name">Niruja Nagarajah</span>
+      <span class="founder-title">CEO · Principal Consultant · Facilitator</span>
+      <a href="/about.html" class="btn-arrow-link">
+        Meet Niruja <span class="arr">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── METHODOLOGY TEASER ────────────────────────────────────── -->
+  <section class="method-teaser-section">
+    <div>
+      <div class="section-tag reveal">The Adjacent Method</div>
+      <h2 class="reveal reveal-d1">Organizational architecture.<br>Not soft HR support.</h2>
+      <p class="lead reveal reveal-d2" style="margin-bottom:36px;">
+        Five structured phases. A forensic data model at the center. Every decision mapped, sequenced, and executed with zero operational leakage.
+      </p>
+      <a href="/methodology.html" class="btn-primary btn-magnetic reveal reveal-d3">See the Full Methodology →</a>
+    </div>
+
+    <div class="teaser-phases reveal reveal-d1">
+      <div class="teaser-phase-row">
+        <span class="tp-n">01</span>
+        <div><div class="tp-t">Strategic Synthesis &amp; Definition</div><div class="tp-d">Executive intent → concrete Target Operating Model.</div></div>
+      </div>
+      <div class="teaser-phase-row">
+        <span class="tp-n">02</span>
+        <div><div class="tp-t">The Data Blueprint</div><div class="tp-d">Timestamped, forensic talent audit and future-state modeling, down to every role.</div></div>
+      </div>
+      <div class="teaser-phase-row">
+        <span class="tp-n">03</span>
+        <div><div class="tp-t">Resource &amp; Skill Alignment</div><div class="tp-d">Specific skills, not job titles, mapped to the future state.</div></div>
+      </div>
+      <div class="teaser-phase-row">
+        <span class="tp-n">04</span>
+        <div><div class="tp-t">Tactical Sequencing</div><div class="tp-d">We don't suggest meetings. We book the calendars.</div></div>
+      </div>
+      <div class="teaser-phase-row">
+        <span class="tp-n">05</span>
+        <div><div class="tp-t">Operational Integrity &amp; Governance</div><div class="tp-d">Single Source of Truth maintained throughout. Zero friction at landing.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIAL ───────────────────────────────────────────── -->
+  <div class="big-testimonial">
+    <div class="big-quote-mark">"</div>
+    <div class="reveal">
+      <p class="big-test-quote">
+        "Niruja brings a rare combination of deep human capital expertise and pragmatic change leadership. She has a strong ability to quickly understand complex organizational contexts and translate strategy into clear, actionable solutions that leaders can actually execute. Whether working with executives on transformation priorities or partnering with teams through periods of ambiguity, Niruja consistently brings clarity, structure, and calm.
+
+What truly distinguishes Niruja is her systems-level thinking paired with a genuine, human-centered approach. She asks the right questions, challenges assumptions thoughtfully, and ensures that people, performance, and culture are always considered together—not in isolation. Clients trust her quickly, and colleagues value her judgment, integrity, and collaborative style.
+
+I would highly recommend Niruja to any organization seeking a trusted advisor in transformation, organizational effectiveness and design."
+      </p>
+      <div class="big-test-meta">
+        <span class="big-test-author">Karen Calder</span>
+        <span class="big-test-role">Senior Advisor, The Poirier Group</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CTA WITH PHOTO ────────────────────────────────────────── -->
+  <div class="cta-photo">
+    <div class="cta-photo-bg">
+      <img
+        src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+      />
+    </div>
+    <div class="cta-photo-overlay"></div>
+    <div class="cta-photo-inner reveal">
+      <div class="section-tag" style="justify-content:center; color: var(--teal-light);">
+        Ready to start?
+      </div>
+      <h2 data-split data-split-delay="0.05">Bring order to the chaos.</h2>
+      <p>If you're navigating something complex and need a trusted partner who has done this before—let's talk.</p>
+      <a href="/contact.html" class="btn-pill btn-pill-light btn-magnetic">Schedule a Discovery Call</a>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+  <footer>
+    <a href="/" class="nav-logo footer-logo">
+      <svg width="32" height="32" viewBox="0 0 46 46" fill="none">
+        <rect width="46" height="46" rx="10" fill="url(#fg)"/>
+        <path d="M14 23 L21 14 L28 23 L21 32 Z" fill="white" opacity="0.9"/>
+        <path d="M18 23 L25 14 L32 23 L25 32 Z" fill="white" opacity="0.5"/>
+        <defs><linearGradient id="fg" x1="0" y1="0" x2="46" y2="46"><stop offset="0%" stop-color="#2BB5B5"/><stop offset="50%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#0F2251"/></linearGradient></defs>
+      </svg>
+      <div class="logo-text-block"><span class="logo-company">Adjacent Hustle</span><span class="logo-tag">Consulting Inc.</span></div>
+    </a>
+    <ul class="footer-links">
+      <li><a href="/methodology.html">Our Approach</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/careers.html">Careers</a></li>
+    </ul>
+    <span class="footer-copy">© 2026 Adjacent Hustle Consulting Inc.</span>
+  </footer>
+
+  <script type="module" src="/src/shared.js"></script>
+</body>
+</html>

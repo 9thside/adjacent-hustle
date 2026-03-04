@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Adjacent Hustle Consulting Inc.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <style>
+    /* Nav: white text over dark background */
+    nav .logo-company { color: var(--white); }
+    nav .logo-tag     { color: rgba(255,255,255,0.45); }
+    nav .nav-links a  { color: rgba(255,255,255,0.55); }
+    nav .nav-links a:hover { color: var(--white); }
+    nav .nav-cta      { background: rgba(255,255,255,0.12) !important; color: var(--white) !important; border: 1px solid rgba(255,255,255,0.2); }
+    nav .nav-cta:hover { background: var(--white) !important; color: var(--navy) !important; }
+    nav.scrolled { background: rgba(10,16,40,0.92) !important; }
+    nav.scrolled .nav-cta { background: var(--teal) !important; border-color: transparent; }
+
+    .what-to-expect {
+      margin-top: 48px;
+      border-top: 1.5px solid rgba(255,255,255,0.15);
+      padding-top: 40px;
+    }
+    .expect-label {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--teal-light);
+      margin-bottom: 20px; display: block;
+    }
+    .expect-item {
+      display: flex; gap: 14px; margin-bottom: 16px;
+    }
+    .expect-num {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: rgba(78,201,201,0.15); color: var(--teal-light);
+      font-size: 12px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .expect-text {
+      font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.6;
+    }
+    .expect-text strong { color: var(--white); font-weight: 600; }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="/" class="nav-logo">
+      <svg width="44" height="44" viewBox="0 0 46 46" fill="none"><rect width="46" height="46" rx="10" fill="url(#lg1)"/><path d="M14 23 L21 14 L28 23 L21 32 Z" fill="white" opacity="0.9"/><path d="M18 23 L25 14 L32 23 L25 32 Z" fill="white" opacity="0.5"/><path d="M21 18 L25 14 L28 18 L25 22 Z" fill="white" opacity="0.35"/><defs><linearGradient id="lg1" x1="0" y1="0" x2="46" y2="46"><stop offset="0%" stop-color="#2BB5B5"/><stop offset="50%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#1B3579"/></linearGradient></defs></svg>
+      <div class="logo-text-block">
+        <span class="logo-company">Adjacent Hustle</span>
+        <span class="logo-tag">Org Design · Change Management · Transformation</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/methodology.html">Our Approach</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html" class="nav-cta">Let's Talk</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTACT SECTION — full dark treatment -->
+  <section style="background: var(--navy); min-height: 100vh; padding-top: 140px;">
+    <div class="contact-grid">
+
+      <!-- Left: info -->
+      <div>
+        <div class="section-tag reveal" style="color: var(--teal-light);">
+          <span style="background: var(--teal-light);"></span>Get In Touch
+        </div>
+        <h2 class="reveal reveal-d1" style="color: var(--white);">Ready to bring order<br>to the chaos?</h2>
+        <p class="lead reveal reveal-d2" style="color: rgba(255,255,255,0.65); max-width: 440px;">Whether you're mid-restructure, planning an M&amp;A, or staring down a complex reorg, the first conversation is a no-pressure 30-minute discovery call.</p>
+
+        <div class="contact-item reveal reveal-d4">
+          <div class="ci-icon">✉️</div>
+          <div>
+            <span class="ci-label">Email</span>
+            <a href="mailto:niruja@adjacenthustle.com" class="ci-value" style="color: var(--white);">niruja@adjacenthustle.com</a>
+          </div>
+        </div>
+
+        <!-- What to expect -->
+        <div class="what-to-expect reveal reveal-d5">
+          <span class="expect-label">What to expect</span>
+          <div class="expect-item">
+            <div class="expect-num">1</div>
+            <div class="expect-text"><strong>Submit your details</strong> and book a Discovery call</div>
+          </div>
+          <div class="expect-item">
+            <div class="expect-num">2</div>
+            <div class="expect-text"><strong>Discovery call</strong> — no pitch deck, just an honest conversation about what you're navigating.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="contact-form reveal reveal-d2" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+        <form data-contact>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname" style="color: rgba(255,255,255,0.55);">First Name</label>
+              <input type="text" id="fname" name="first_name" placeholder="Jane" required
+                style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); color: white;" />
+            </div>
+            <div class="form-group">
+              <label for="lname" style="color: rgba(255,255,255,0.55);">Last Name</label>
+              <input type="text" id="lname" name="last_name" placeholder="Smith" required
+                style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); color: white;" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" style="color: rgba(255,255,255,0.55);">Work Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required
+              style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); color: white;" />
+          </div>
+          <div class="form-group">
+            <label for="company" style="color: rgba(255,255,255,0.55);">Company</label>
+            <input type="text" id="company" name="company" placeholder="Acme Corp"
+              style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); color: white;" />
+          </div>
+          <div class="form-group">
+            <label for="service" style="color: rgba(255,255,255,0.55);">How can we help?</label>
+            <select id="service" name="service"
+              style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); color: rgba(255,255,255,0.7);">
+              <option value="">Select a service area...</option>
+              <option>Transformation &amp; Change Management</option>
+              <option>M&amp;A Integration &amp; Workforce Transition</option>
+              <option>Organizational Design &amp; Restructuring</option>
+              <option>Program &amp; Project Management</option>
+              <option>Data-Driven Insights &amp; Reporting</option>
+              <option>Executive Advisory &amp; Strategy Communication</option>
+              <option>Not sure yet — let's talk</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message" style="color: rgba(255,255,255,0.55);">Tell us about your situation</label>
+            <textarea id="message" name="message" placeholder="Brief overview of what you're navigating..."
+              style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); color: white;"></textarea>
+          </div>
+          <button type="submit" class="btn-submit" style="background: var(--teal);">Send Message →</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="/" class="nav-logo footer-logo">
+      <svg width="34" height="34" viewBox="0 0 46 46" fill="none"><rect width="46" height="46" rx="10" fill="url(#lg2)"/><path d="M14 23 L21 14 L28 23 L21 32 Z" fill="white" opacity="0.9"/><path d="M18 23 L25 14 L32 23 L25 32 Z" fill="white" opacity="0.5"/><defs><linearGradient id="lg2" x1="0" y1="0" x2="46" y2="46"><stop offset="0%" stop-color="#2BB5B5"/><stop offset="50%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#1B3579"/></linearGradient></defs></svg>
+      <div class="logo-text-block"><span class="logo-company">Adjacent Hustle</span><span class="logo-tag">Consulting Inc.</span></div>
+    </a>
+    <ul class="footer-links">
+      <li><a href="/methodology.html">Our Approach</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/careers.html">Careers</a></li>
+    </ul>
+    <span class="footer-copy">© 2026 Adjacent Hustle Consulting Inc.</span>
+  </footer>
+
+  <script type="module" src="/src/shared.js"></script>
+</body>
+</html>

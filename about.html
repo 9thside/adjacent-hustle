@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Adjacent Hustle Consulting Inc.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 56px;
+      }
+      .value-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 32px 28px;
+        border: 1.5px solid var(--gray-200);
+        transition:
+          border-color var(--t) var(--ease),
+          transform var(--t) var(--ease);
+      }
+      .value-card:hover {
+        border-color: rgba(43, 181, 181, 0.4);
+        transform: translateY(-4px);
+      }
+      .value-icon {
+        font-size: 32px;
+        margin-bottom: 16px;
+        display: block;
+      }
+      .value-card h3 {
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 10px;
+      }
+      .value-card p {
+        font-size: 14px;
+        color: var(--gray-600);
+        line-height: 1.7;
+      }
+
+      .name-explainer {
+        background: linear-gradient(
+          140deg,
+          #eef4ff 0%,
+          #f4eeff 55%,
+          #fff0fa 100%
+        );
+        border-radius: 20px;
+        padding: 48px;
+        margin-top: 64px;
+      }
+      .name-explainer blockquote {
+        font-size: clamp(18px, 2vw, 24px);
+        font-style: italic;
+        color: var(--navy);
+        font-weight: 600;
+        line-height: 1.5;
+        border-left: 4px solid var(--teal);
+        padding-left: 24px;
+        margin-top: 20px;
+      }
+
+      @media (max-width: 900px) {
+        .values-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .name-explainer {
+          padding: 32px 24px;
+        }
+      }
+      @media (max-width: 640px) {
+        .values-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <nav id="nav">
+      <a href="/" class="nav-logo">
+        <svg width="44" height="44" viewBox="0 0 46 46" fill="none">
+          <rect width="46" height="46" rx="10" fill="url(#lg1)" />
+          <path d="M14 23 L21 14 L28 23 L21 32 Z" fill="white" opacity="0.9" />
+          <path d="M18 23 L25 14 L32 23 L25 32 Z" fill="white" opacity="0.5" />
+          <path d="M21 18 L25 14 L28 18 L25 22 Z" fill="white" opacity="0.35" />
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="46" y2="46">
+              <stop offset="0%" stop-color="#2BB5B5" />
+              <stop offset="50%" stop-color="#8B5CF6" />
+              <stop offset="100%" stop-color="#1B3579" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="logo-text-block">
+          <span class="logo-company">Adjacent Hustle</span>
+          <span class="logo-tag"
+            >Org Design · Change Management · Transformation</span
+          >
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/methodology.html">Our Approach</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html" class="nav-cta">Let's Talk</a></li>
+      </ul>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <div class="page-hero-bg">
+        <div class="ph-orb ph-orb-1"></div>
+        <div class="ph-orb ph-orb-2"></div>
+      </div>
+      <div class="page-hero-inner">
+        <div class="section-tag">About</div>
+        <h1>
+          The work no one<br /><span class="gradient"
+            >teaches you to manage.</span
+          >
+        </h1>
+        <p class="lead">
+          15 years of refining people operations with the industries most
+          complex changes: M&amp;A integrations, large-scale restructuring,
+          divestitures, and more
+        </p>
+      </div>
+    </div>
+
+    <!-- FOUNDER BIO -->
+    <section style="background: var(--white)">
+      <div class="about-grid">
+        <div class="about-photo-wrap reveal" style="position: relative;">
+          <div class="photo-frame">
+            <img
+              src="/niruja.jpg"
+              alt="Niruja Nagarajah — CEO, Adjacent Hustle Consulting Inc."
+            />
+          </div>
+          <div class="name-badge">
+            <span class="badge-name">Niruja Nagarajah</span>
+            <span class="badge-role">CEO · Facilitator · Consultant</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="section-tag reveal">Meet the Founder</div>
+          <h2 class="reveal reveal-d1">Niruja Nagarajah</h2>
+          <p class="reveal reveal-d2">
+            Niruja is an impact-driven leader specializing in transformational
+            change. She combines deep expertise in change management with a
+            personalized coaching approach to drive sustainable growth. With a
+            strong track record of tackling complex organizational challenges,
+            she leverages meaningful data to empower leadership teams in shaping
+            culture and structure. A strategic problem-solver, Niruja excels at
+            identifying core challenges, co-creating innovative solutions, and
+            fostering highperformance environments. With over 15 years of
+            experience, her consulting and project management experience spans
+            financial services, tech, education, nonprofit, pharma, and
+            healthcare, allowing her to navigate diverse industries with
+            agility.
+          </p>
+          <div class="industries reveal reveal-d5">
+            <span class="ind-tag">Financial Services</span>
+            <span class="ind-tag">Technology</span>
+            <span class="ind-tag">Healthcare</span>
+            <span class="ind-tag">Education</span>
+            <span class="ind-tag">Non-Profit</span>
+            <span class="ind-tag">Pharma</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <div class="testimonial-section">
+      <div class="test-orb test-orb-1"></div>
+      <div class="test-orb test-orb-2"></div>
+      <div class="test-inner reveal">
+        <span class="quote-icon">"</span>
+        <p class="test-quote">
+          Niruja brings a rare combination of deep human capital expertise and
+          pragmatic change leadership. She has a strong ability to quickly
+          understand complex organizational contexts and translate strategy into
+          clear, actionable solutions that leaders can actually execute. Whether
+          working with executives on transformation priorities or partnering
+          with teams through periods of ambiguity, Niruja consistently brings
+          clarity, structure, and calm. What truly distinguishes Niruja is her
+          systems-level thinking paired with a genuine, human-centered approach.
+          She asks the right questions, challenges assumptions thoughtfully, and
+          ensures that people, performance, and culture are always considered
+          together—not in isolation. Clients trust her quickly, and colleagues
+          value her judgment, integrity, and collaborative style. I would highly
+          recommend Niruja to any organization seeking a trusted advisor in
+          transformation, organizational effectiveness and design.
+        </p>
+        <span class="test-author">Karen Calder</span>
+        <span class="test-role">Senior Advisor, The Poirier Group</span>
+      </div>
+    </div>
+
+    <!-- VALUES + NAME -->
+    <section style="background: var(--gray-50)">
+      <div class="section-tag reveal">What We Stand For</div>
+      <h2 class="reveal reveal-d1">Values that drive<br />every engagement.</h2>
+
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <span class="value-icon">🔬</span>
+          <h3>Radical Transparency</h3>
+          <p>
+            We tell you what's actually happening in your organization—not
+            what's comfortable. Honesty in the hard moments is what builds
+            trust.
+          </p>
+        </div>
+        <div class="value-card reveal reveal-d1">
+          <span class="value-icon">📐</span>
+          <h3>Operational Discipline</h3>
+          <p>
+            We don't just advise—we execute. Every recommendation comes with a
+            plan, a timeline, and someone accountable for the outcome.
+          </p>
+        </div>
+        <div class="value-card reveal reveal-d2">
+          <span class="value-icon">📊</span>
+          <h3>Data Over Instinct</h3>
+          <p>
+            Decisions backed by forensic data analysis. When we say 95% adoption
+            by go-live, we have the database to prove it.
+          </p>
+        </div>
+        <div class="value-card reveal reveal-d3">
+          <span class="value-icon">🤝</span>
+          <h3>Partnership, Not Consulting</h3>
+          <p>
+            We become a member of your team—not a vendor. The trust C-suite
+            leaders place in us is built engagement by engagement.
+          </p>
+        </div>
+        <div class="value-card reveal reveal-d4">
+          <span class="value-icon">🧭</span>
+          <h3>People First, Always</h3>
+          <p>
+            Structural change is human change. We hold both realities
+            simultaneously—the data and the person behind each row in the
+            spreadsheet.
+          </p>
+        </div>
+        <div class="value-card reveal reveal-d5">
+          <span class="value-icon">⚡</span>
+          <h3>Execution Over Elegance</h3>
+          <p>
+            The best plan that doesn't get implemented is worthless. We
+            prioritize the work that moves the needle, in the order it needs to
+            happen.
+          </p>
+        </div>
+      </div>
+
+      <!-- Name explainer -->
+      <div class="name-explainer reveal">
+        <div class="section-tag">Why "Adjacent Hustle"?</div>
+        <p
+          style="
+            color: var(--gray-600);
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 680px;
+          "
+        >
+          The name reflects exactly what we do. We work <em>adjacent</em> to
+          your organization; close enough to be fully embedded in the work, far
+          enough outside to see clearly what's needed. And the "hustle" is real:
+          the intensive, relentless, roll-up-your-sleeves execution that turns a
+          board decision into a lived organizational reality.
+        </p>
+        <blockquote>
+          "the "hustle" is real: the intensive, relentless, roll-up-your-sleeves
+          execution that turns a board decision into a lived organizational
+          reality."
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background: var(--white); text-align: center">
+      <div class="reveal">
+        <div class="section-tag" style="justify-content: center">
+          Work With Niruja
+        </div>
+        <h2 style="margin: 0 auto 16px">Let's solve something hard.</h2>
+        <p class="lead" style="margin: 0 auto 36px; text-align: center">
+          If you're navigating something complex and need a trusted partner in
+          the room, let's talk.
+        </p>
+        <a href="/contact.html" class="btn-primary"
+          >Schedule a Discovery Call</a
+        >
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <a href="/" class="nav-logo footer-logo">
+        <svg width="34" height="34" viewBox="0 0 46 46" fill="none">
+          <rect width="46" height="46" rx="10" fill="url(#lg2)" />
+          <path d="M14 23 L21 14 L28 23 L21 32 Z" fill="white" opacity="0.9" />
+          <path d="M18 23 L25 14 L32 23 L25 32 Z" fill="white" opacity="0.5" />
+          <defs>
+            <linearGradient id="lg2" x1="0" y1="0" x2="46" y2="46">
+              <stop offset="0%" stop-color="#2BB5B5" />
+              <stop offset="50%" stop-color="#8B5CF6" />
+              <stop offset="100%" stop-color="#1B3579" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="logo-text-block">
+          <span class="logo-company">Adjacent Hustle</span
+          ><span class="logo-tag">Consulting Inc.</span>
+        </div>
+      </a>
+      <ul class="footer-links">
+        <li><a href="/methodology.html">Our Approach</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/careers.html">Careers</a></li>
+      </ul>
+      <span class="footer-copy">© 2026 Adjacent Hustle Consulting Inc.</span>
+    </footer>
+
+    <script type="module" src="/src/shared.js"></script>
+  </body>
+</html>
