@@ -31,6 +31,7 @@
     .hero-dark h1 {
       font-size: clamp(36px, 5vw, 72px);
     }
+    .desktop-only { display: inline; }
 
     /* ── CTA with photo ── */
     .cta-photo {
@@ -232,6 +233,8 @@
     }
 
     @media (max-width: 640px) {
+      .desktop-only { display: none; }
+
       /* Hero */
       .hero-dark {
         padding: 120px 24px 100px;
@@ -315,7 +318,7 @@
     </p>
 
     <h1 data-split data-split-delay="0.1">
-      Turn transformation into clear execution.
+      Turn transformation into <br class="desktop-only">clear execution.
     </h1>
 
     <p class="hero-sub" style="animation: fadeInUp 0.8s 0.75s ease both; opacity:0;">

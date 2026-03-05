@@ -17,11 +17,32 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 
 // ── Split text word reveal ────────────────────────────────────────
 export function splitText(el, baseDelay = 0) {
-  const words = el.textContent.trim().split(/\s+/)
-  el.setAttribute('aria-label', el.textContent)
-  el.innerHTML = words.map((w, i) =>
-    `<span class="word-wrap"><span class="word" style="animation-delay:${(baseDelay + i * 0.07).toFixed(2)}s">${w}</span></span>`
-  ).join(' ')
+  const raw = el.innerHTML
+  const tokenized = raw
+    .replace(/<br\s+class=["']([^"']+)["']\s*\/?>/gi, (_, cls) => ` __BR:${cls}__ `)
+    .replace(/<br\s*\/?>/gi, ' __BR__ ')
+    .replace(/<[^>]*>/g, '')
+    .trim()
+
+  const tokens = tokenized.length ? tokenized.split(/\s+/) : []
+  const aria = tokenized
+    .replace(/__BR:[^_]+__|__BR__/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  el.setAttribute('aria-label', aria)
+
+  let wordIndex = 0
+  el.innerHTML = tokens.map(token => {
+    if (token.startsWith('__BR:') && token.endsWith('__')) {
+      const cls = token.slice(5, -2)
+      return `<br class="${cls}">`
+    }
+    if (token === '__BR__') return '<br>'
+    const delay = (baseDelay + wordIndex * 0.07).toFixed(2)
+    wordIndex += 1
+    return `<span class="word-wrap"><span class="word" style="animation-delay:${delay}s">${token}</span></span>`
+  }).join(' ')
 }
 
 // Run on all [data-split] elements immediately (hero is visible on load)
