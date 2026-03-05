@@ -18,6 +18,37 @@
     nav .nav-cta:hover { background: var(--white) !important; color: var(--navy) !important; }
     nav.scrolled { background: rgba(10,16,40,0.92) !important; }
     nav.scrolled .nav-cta { background: var(--teal) !important; border-color: transparent; }
+    nav .nav-links a.active { color: var(--white); }
+
+    /* ── Method hero split ── */
+    .method-hero-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      min-height: 520px;
+    }
+    .method-hero-img {
+      position: relative;
+      overflow: hidden;
+    }
+    .method-hero-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      filter: brightness(0.75) saturate(0.85);
+    }
+    .method-hero-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--navy) 0%, transparent 40%);
+    }
+    @media (max-width: 768px) {
+      .method-hero-split { grid-template-columns: 1fr; }
+      .method-hero-img { min-height: 280px; }
+      .method-hero-img::after { background: linear-gradient(to bottom, transparent 60%, var(--navy) 100%); }
+    }
   </style>
 </head>
 
@@ -40,15 +71,24 @@
   </nav>
 
   <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="page-hero-bg">
-      <div class="ph-orb ph-orb-1"></div>
-      <div class="ph-orb ph-orb-2"></div>
-    </div>
-    <div class="page-hero-inner">
-      <div class="section-tag">The Adjacent Method</div>
-      <h1>The Architecture<br>of <span class="gradient">Change.</span></h1>
-      <p class="lead">Most enterprise strategies fail not due to a lack of vision, but due to operational leakage. We don't offer soft HR support, we provide the organizational architecture required to move a ship that is changing course.</p>
+  <div class="page-hero" style="padding: 0; overflow: hidden;">
+    <div class="method-hero-split">
+      <div style="padding: 160px 64px 80px; position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center;">
+        <div class="page-hero-bg" style="position: absolute; inset: 0; z-index: 0; pointer-events: none;">
+          <div class="ph-orb ph-orb-2"></div>
+        </div>
+        <div class="page-hero-inner" style="position: relative; z-index: 1;">
+          <div class="section-tag">The Adjacent Method</div>
+          <h1>The Architecture<br>of <span class="gradient">Change.</span></h1>
+          <p class="lead">Most enterprise strategies fail not due to a lack of vision, but due to operational leakage. We don't offer soft HR support, we provide the organizational architecture required to move a ship that is changing course.</p>
+        </div>
+      </div>
+      <div class="method-hero-img">
+        <img
+          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1000&q=82"
+          alt="Executive leadership team in a strategic planning session"
+        />
+      </div>
     </div>
   </div>
 
