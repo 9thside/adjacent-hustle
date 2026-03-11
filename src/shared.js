@@ -128,3 +128,19 @@ if (form) {
     }, 5000)
   })
 }
+
+// ── Content loader ───────────────────────────────────────────────
+import { loadPageContent, loadGlobalContent } from './content-loader.js';
+
+// Determine page from URL
+const pageMap = {
+  '/': 'index',
+  '/index.html': 'index',
+  '/about.html': 'about',
+  '/methodology.html': 'methodology',
+  '/contact.html': 'contact',
+  '/careers.html': 'careers',
+};
+const pageName = pageMap[location.pathname] || 'index';
+loadPageContent(pageName);
+loadGlobalContent();

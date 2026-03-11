@@ -184,8 +184,8 @@
     <a href="/" class="nav-logo">
       <svg width="44" height="44" viewBox="0 0 46 46" fill="none"><rect width="46" height="46" rx="10" fill="url(#lg1)"/><path d="M14 23 L21 14 L28 23 L21 32 Z" fill="white" opacity="0.9"/><path d="M18 23 L25 14 L32 23 L25 32 Z" fill="white" opacity="0.5"/><path d="M21 18 L25 14 L28 18 L25 22 Z" fill="white" opacity="0.35"/><defs><linearGradient id="lg1" x1="0" y1="0" x2="46" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2BB5B5"/><stop offset="50%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#0F2251"/></linearGradient></defs></svg>
       <div class="logo-text-block">
-        <span class="logo-company">Adjacent Hustle</span>
-        <span class="logo-tag">Org Design · Change Management · Transformation</span>
+        <span class="logo-company" data-global="nav.logoName">Adjacent Hustle</span>
+        <span class="logo-tag" data-global="nav.logoTag">Org Design · Change Management · Transformation</span>
       </div>
     </a>
     <ul class="nav-links">
@@ -202,65 +202,109 @@
       <div class="ph-orb ph-orb-2"></div>
     </div>
     <div class="page-hero-inner">
-      <div class="section-tag">Careers</div>
-      <h1>Work that's worth<br><span class="gradient">showing up for.</span></h1>
-      <p class="lead">We work on the hardest organizational challenges in the room—M&amp;A integrations, workforce restructuring, large-scale transformations. If that kind of complexity excites you rather than intimidates you, you'd fit right in.</p>
+      <div class="section-tag" data-content="hero.sectionTag">Careers</div>
+      <h1 data-content-html="hero.headline">Work that's worth<br><span class="gradient">showing up for.</span></h1>
+      <p class="lead" data-content="hero.lead">We work on the hardest organizational challenges in the room—M&amp;A integrations, workforce restructuring, large-scale transformations. If that kind of complexity excites you rather than intimidates you, you'd fit right in.</p>
     </div>
   </div>
 
   <!-- CULTURE PILLARS -->
   <section class="culture-section">
-    <div class="section-tag reveal">What It's Like to Work Here</div>
-    <h2 class="reveal reveal-d1">Built for consultants who<br>want to actually do the work.</h2>
+    <div class="section-tag reveal" data-content="culture.sectionTag">What It's Like to Work Here</div>
+    <h2 class="reveal reveal-d1" data-content-html="culture.headline">Built for consultants who<br>want to actually do the work.</h2>
 
     <div class="culture-grid">
       <div class="culture-card reveal">
         <span class="culture-num">01</span>
-        <h3>Real complexity, not PowerPoint strategy</h3>
-        <p>We get embedded in the work—forensic data models, communication plans, cross-functional workstream management. You won't be asked to fill decks.</p>
+        <h3 data-content="culture.p1.title">Real complexity, not PowerPoint strategy</h3>
+        <p data-content="culture.p1.desc">We get embedded in the work—forensic data models, communication plans, cross-functional workstream management. You won't be asked to fill decks.</p>
       </div>
       <div class="culture-card reveal reveal-d1">
         <span class="culture-num">02</span>
-        <h3>Contract-first, flexibility-forward</h3>
-        <p>We work on engagement-based contracts. You bring expertise when it's needed, on timelines that respect your life. No performative presenteeism.</p>
+        <h3 data-content="culture.p2.title">Contract-first, flexibility-forward</h3>
+        <p data-content="culture.p2.desc">We work on engagement-based contracts. You bring expertise when it's needed, on timelines that respect your life. No performative presenteeism.</p>
       </div>
       <div class="culture-card reveal reveal-d2">
         <span class="culture-num">03</span>
-        <h3>Direct access to decision-makers</h3>
-        <p>You'll sit across from CFOs and COOs, not middle managers. When you have a recommendation, it gets heard by the person who can act on it.</p>
+        <h3 data-content="culture.p3.title">Direct access to decision-makers</h3>
+        <p data-content="culture.p3.desc">You'll sit across from CFOs and COOs, not middle managers. When you have a recommendation, it gets heard by the person who can act on it.</p>
       </div>
       <div class="culture-card reveal reveal-d3">
         <span class="culture-num">04</span>
-        <h3>Evidence over instinct</h3>
-        <p>We build the database first. If you love turning people data into structural insight, this is the environment where that skill gets used—not sidelined.</p>
+        <h3 data-content="culture.p4.title">Evidence over instinct</h3>
+        <p data-content="culture.p4.desc">We build the database first. If you love turning people data into structural insight, this is the environment where that skill gets used—not sidelined.</p>
       </div>
       <div class="culture-card reveal reveal-d4">
         <span class="culture-num">05</span>
-        <h3>Small team, high trust</h3>
-        <p>Adjacent Hustle runs lean by design. That means real ownership, real impact, and a direct relationship with the work you deliver—no layers, no credit dilution.</p>
+        <h3 data-content="culture.p5.title">Small team, high trust</h3>
+        <p data-content="culture.p5.desc">Adjacent Hustle runs lean by design. That means real ownership, real impact, and a direct relationship with the work you deliver—no layers, no credit dilution.</p>
       </div>
       <div class="culture-card reveal reveal-d5">
         <span class="culture-num">06</span>
-        <h3>Industries that matter to you</h3>
-        <p>Financial services, healthcare, technology, pharma, education—our clients span sectors. You bring the discipline; we bring the breadth.</p>
+        <h3 data-content="culture.p6.title">Industries that matter to you</h3>
+        <p data-content="culture.p6.desc">Financial services, healthcare, technology, pharma, education—our clients span sectors. You bring the discipline; we bring the breadth.</p>
       </div>
     </div>
   </section>
 
   <!-- OPEN ROLES -->
   <section class="roles-section">
-    <div class="section-tag reveal">Open Roles</div>
-    <h2 class="reveal reveal-d1">Always-On Opportunities.</h2>
+    <div class="section-tag reveal" data-content="roles.sectionTag">Open Roles</div>
+    <h2 class="reveal reveal-d1" data-content="roles.headline">Always-On Opportunities.</h2>
 
     <div class="roles-list">
-      <div class="role-card reveal" style="grid-template-columns: 1fr; text-align: center; padding: 56px 36px;">
+      <div class="role-card reveal">
         <div>
-          <div style="font-size: 32px; margin-bottom: 16px; opacity: 0.25;">📋</div>
-          <h3 style="color: var(--navy); margin-bottom: 8px;">No open roles right now</h3>
-          <p class="role-desc" style="max-width: 480px; margin: 0 auto;">
-            We're not actively hiring at the moment, but that changes quickly. Send a general application below and we'll reach out when something fits.
+          <div class="role-meta">
+            <span class="role-tag">Contract</span>
+            <span class="role-tag role-tag-neutral">Remote-first</span>
+            <span class="role-tag role-tag-neutral">Canada</span>
+          </div>
+          <h3 data-content="roles.r1.title">Senior Change Management Consultant</h3>
+          <p class="role-desc" data-content="roles.r1.desc">
+            Lead change strategy and execution across complex organizational transformations. You'll design and deliver communications plans, manager readiness programs, and stakeholder engagement frameworks—working directly with C-suite clients on high-stakes programs.
           </p>
         </div>
+        <a
+          href="mailto:niruja@adjacenthustle.com?subject=Senior%20Change%20Management%20Consultant%20Application"
+          class="role-apply"
+        >Apply →</a>
+      </div>
+
+      <div class="role-card reveal reveal-d1">
+        <div>
+          <div class="role-meta">
+            <span class="role-tag">Contract</span>
+            <span class="role-tag role-tag-neutral">Remote-first</span>
+            <span class="role-tag role-tag-neutral">Canada</span>
+          </div>
+          <h3 data-content="roles.r2.title">HR Project Manager</h3>
+          <p class="role-desc" data-content="roles.r2.desc">
+            Own the operational backbone of large-scale HR programs—workstream tracking, cross-functional coordination, risk registers, and executive reporting. You're the person who keeps every track moving without anyone having to ask twice.
+          </p>
+        </div>
+        <a
+          href="mailto:niruja@adjacenthustle.com?subject=HR%20Project%20Manager%20Application"
+          class="role-apply"
+        >Apply →</a>
+      </div>
+
+      <div class="role-card reveal reveal-d2">
+        <div>
+          <div class="role-meta">
+            <span class="role-tag">Contract</span>
+            <span class="role-tag role-tag-neutral">Remote-first</span>
+            <span class="role-tag role-tag-neutral">Canada</span>
+          </div>
+          <h3 data-content="roles.r3.title">People Analytics Specialist</h3>
+          <p class="role-desc" data-content="roles.r3.desc">
+            Build the data models that power our engagements. You'll work with HRIS exports, headcount data, and org mapping tools to create the forensic talent blueprints our clients make decisions from. Excel mastery and an eye for structural insight are essential.
+          </p>
+        </div>
+        <a
+          href="mailto:niruja@adjacenthustle.com?subject=People%20Analytics%20Specialist%20Application"
+          class="role-apply"
+        >Apply →</a>
       </div>
     </div>
   </section>
@@ -268,10 +312,10 @@
   <!-- GENERAL APPLICATION -->
   <div class="general-app">
     <div class="reveal">
-      <div class="section-tag" style="justify-content:center; color: var(--teal-light);">Don't see your role?</div>
-      <h2 data-split data-split-delay="0.05">Send us a general application.</h2>
-      <p>If you have deep HR, change management, or organizational design expertise and want to work on engagements that actually challenge you—we want to hear from you.</p>
-      <a href="mailto:nirujahrconsulting@gmail.com?subject=General%20Application%20%E2%80%94%20Adjacent%20Hustle" class="btn-pill btn-pill-light btn-magnetic">Send Your Application →</a>
+      <div class="section-tag" data-content="generalApp.sectionTag" style="justify-content:center; color: var(--teal-light);">Don't see your role?</div>
+      <h2 data-split data-split-delay="0.05" data-content="generalApp.headline">Send us a general application.</h2>
+      <p data-content="generalApp.body">If you have deep HR, change management, or organizational design expertise and want to work on engagements that actually challenge you—we want to hear from you.</p>
+      <a href="mailto:niruja@adjacenthustle.com?subject=General%20Application%20%E2%80%94%20Adjacent%20Hustle" class="btn-pill btn-pill-light btn-magnetic" data-content="generalApp.cta">Send Your Application →</a>
       <p class="general-app-email">Or email us directly at <a href="mailto:niruja@adjacenthustle.com">niruja@adjacenthustle.com</a></p>
     </div>
   </div>
@@ -280,7 +324,7 @@
   <footer>
     <a href="/" class="nav-logo footer-logo">
       <svg width="34" height="34" viewBox="0 0 46 46" fill="none"><rect width="46" height="46" rx="10" fill="url(#lg2)"/><path d="M14 23 L21 14 L28 23 L21 32 Z" fill="white" opacity="0.9"/><path d="M18 23 L25 14 L32 23 L25 32 Z" fill="white" opacity="0.5"/><path d="M21 18 L25 14 L28 18 L25 22 Z" fill="white" opacity="0.35"/><defs><linearGradient id="lg2" x1="0" y1="0" x2="46" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2BB5B5"/><stop offset="50%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#0F2251"/></linearGradient></defs></svg>
-      <div class="logo-text-block"><span class="logo-company">Adjacent Hustle</span><span class="logo-tag">Consulting Inc.</span></div>
+      <div class="logo-text-block"><span class="logo-company" data-global="nav.logoName">Adjacent Hustle</span><span class="logo-tag">Consulting Inc.</span></div>
     </a>
     <ul class="footer-links">
       <li><a href="/methodology.html">Our Approach</a></li>
@@ -288,7 +332,7 @@
       <li><a href="/contact.html">Contact</a></li>
       <li><a href="/careers.html">Careers</a></li>
     </ul>
-    <span class="footer-copy">© 2026 Adjacent Hustle Consulting Inc.</span>
+    <span class="footer-copy" data-global="footer.copyright">© 2026 Adjacent Hustle Consulting Inc.</span>
   </footer>
 
   <script type="module" src="/src/shared.js"></script>

@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "sectionTag": "About",
+    "headline1": "The work no one",
+    "headline2": "teaches you to manage.",
+    "lead": "15 years of refining people operations with the industries most complex changes: M&A integrations, large-scale restructuring, divestitures, and more"
+  },
+  "founder": {
+    "sectionTag": "Meet the Founder",
+    "name": "Niruja Nagarajah",
+    "bio": "Niruja is an impact-driven leader specializing in transformational change. She combines deep expertise in change management with a personalized coaching approach to drive sustainable growth. With a strong track record of tackling complex organizational challenges, she leverages meaningful data to empower leadership teams in shaping culture and structure. A strategic problem-solver, Niruja excels at identifying core challenges, co-creating innovative solutions, and fostering highperformance environments. With over 15 years of experience, her consulting and project management experience spans financial services, tech, education, nonprofit, pharma, and healthcare, allowing her to navigate diverse industries with agility.",
+    "badgeRole": "CEO · Principal Consultant · Facilitator",
+    "ind1": "Financial Services",
+    "ind2": "Technology",
+    "ind3": "Healthcare",
+    "ind4": "Education",
+    "ind5": "Non-Profit",
+    "ind6": "Pharma"
+  },
+  "testimonial": {
+    "quote": "Niruja brings a rare combination of deep human capital expertise and pragmatic change leadership. She has a strong ability to quickly understand complex organizational contexts and translate strategy into clear, actionable solutions that leaders can actually execute. Whether working with executives on transformation priorities or partnering with teams through periods of ambiguity, Niruja consistently brings clarity, structure, and calm. What truly distinguishes Niruja is her systems-level thinking paired with a genuine, human-centered approach. She asks the right questions, challenges assumptions thoughtfully, and ensures that people, performance, and culture are always considered together—not in isolation. Clients trust her quickly, and colleagues value her judgment, integrity, and collaborative style. I would highly recommend Niruja to any organization seeking a trusted advisor in transformation, organizational effectiveness and design.",
+    "author": "Karen Calder",
+    "role": "Senior Advisor, The Poirier Group"
+  },
+  "values": {
+    "sectionTag": "What We Stand For",
+    "headline": "Values that drive every engagement.",
+    "v1": { "title": "Radical Transparency" },
+    "v2": { "title": "Operational Discipline" },
+    "v3": { "title": "Data Over Instinct" },
+    "v4": { "title": "Partnership, Not Consulting" },
+    "v5": { "title": "People First, Always" },
+    "v6": { "title": "Execution Over Elegance" }
+  },
+  "nameExplainer": {
+    "sectionTag": "Why \"Adjacent Hustle\"?",
+    "body": "The name reflects exactly what we do. We work adjacent to your organization; close enough to be fully embedded in the work, far enough outside to see clearly what's needed. And the \"hustle\" is real: the intensive, relentless, roll-up-your-sleeves execution that turns a board decision into a lived organizational reality.",
+    "blockquote": "\"the 'hustle' is real: the intensive, relentless, roll-up-your-sleeves execution that turns a board decision into a lived organizational reality.\""
+  },
+  "cta": {
+    "sectionTag": "Work With Niruja",
+    "headline": "Let's solve something hard.",
+    "lead": "If you're navigating something complex and need a trusted partner in the room, let's talk.",
+    "cta": "Schedule a Discovery Call"
+  }
+}

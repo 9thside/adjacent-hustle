@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "sectionTag": "The Adjacent Method",
+    "headline1": "The Architecture",
+    "headline2": "Change.",
+    "lead": "Most enterprise strategies fail not due to a lack of vision, but due to operational leakage. We don't offer soft HR support, we provide the organizational architecture required to move a ship that is changing course."
+  },
+  "intro": {
+    "sectionTag": "Why Most Transformations Fail",
+    "headline": "The gap between strategy and execution.",
+    "lead": "When a board-level decision is made, a gap immediately opens between the strategy and the teams ability to execute. Adjacent Hustle closes that gap with data-backed precision, turning a conceptual vision into a structured, sequenced, measurable operating reality."
+  },
+  "phase1": {
+    "title": "Strategic Synthesis & Definition",
+    "desc": "We begin by stripping away the idealism. Working directly with the executive suite, we translate high-level intent into a concrete Target Operating Model. Defining exactly what \"success\" looks like in terms of structure, cost, and output. A conceptual vision becomes a visual roadmap that every stakeholder can see and hold accountable."
+  },
+  "phase2": {
+    "title": "Resource & Skill Alignment",
+    "desc": "A plan is only as good as the hands moving it. We identify the specific skills, not just job titles, required to achieve the future state. If the talent isn't in the room, we define the exact profile that needs to be sourced. We map the \"Who\" to the \"How\" with clinical precision."
+  },
+  "phase3": {
+    "title": "The Data Blueprint",
+    "desc": "This is where the transformation becomes real. Unlike traditional HR, our process is rooted in data manipulation and future-state modeling. The master database is not a spreadsheet, it is the single source of truth that drives every decision downstream.",
+    "bullet1Title": "Current State Audit:",
+    "bullet1Text": "A timestamped, forensic look at your existing talent structure: roles, reporting lines, compensation bands.",
+    "bullet2Title": "Future State Mapping:",
+    "bullet2Text": "We manipulate the data to reflect every role change, reporting line shift, and departure, before any announcement is made.",
+    "bullet3Title": "Impact Categorization:",
+    "bullet3Text": "Every employee is assigned a specific action plan: Retention, Transition, Promotion, etc."
+  },
+  "phase4": {
+    "title": "Tactical Sequencing & Orchestration",
+    "desc": "Strategy often dies in the in-between moments. We build the sequencing engine that ensures no ball is dropped when executing action plans.",
+    "bullet1Title": "Communication Cascades:",
+    "bullet1Text": "Exactly who hears what, and when, scripted to the role and audience level.",
+    "bullet2Title": "Logistics of Change:",
+    "bullet2Text": "We don't suggest meetings, we book the calendars. Legal reviews for compensation packages, new manager introductions, severance calls: every touchpoint is scheduled and tracked."
+  },
+  "phase5": {
+    "title": "Operational Integrity & Governance",
+    "desc": "Transformation is a living process that requires a strong feedback loop to the governance and steering committees. By organizing all data to fit the plan, we give the executive teams real-time visibility into the transformation efforts and create real-time alignment. No hidden surprises."
+  },
+  "pullquote": {
+    "text": "Strategy is a promise. Transformation is the execution. We make sure they match."
+  },
+  "cta": {
+    "sectionTag": "Work With Us",
+    "headline": "Ready to close the gap?",
+    "lead": "Let's talk about your transformation. The first call is 30 minutes, no pressure.",
+    "cta": "Schedule a Discovery Call"
+  }
+}

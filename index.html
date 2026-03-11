@@ -297,8 +297,8 @@
         <defs><linearGradient id="ng" x1="0" y1="0" x2="46" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2BB5B5"/><stop offset="50%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#0F2251"/></linearGradient></defs>
       </svg>
       <div class="logo-text-block">
-        <span class="logo-company">Adjacent Hustle</span>
-        <span class="logo-tag">Org Design · Change Management · Transformation</span>
+        <span class="logo-company" data-global="nav.logoName">Adjacent Hustle</span>
+        <span class="logo-tag" data-global="nav.logoTag">Org Design · Change Management · Transformation</span>
       </div>
     </a>
     <ul class="nav-links">
@@ -314,21 +314,21 @@
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
 
-    <p class="hero-eyebrow">
+    <p class="hero-eyebrow" data-content="hero.eyebrow">
       <span></span> Adjacent Hustle Consulting <span></span> Toronto, Canada
     </p>
 
-    <h1 data-split data-split-delay="0.1">
+    <h1 data-split data-split-delay="0.1" data-content="hero.headline">
       Turn transformation into <br class="desktop-only">clarity and execution.
     </h1>
 
-    <p class="hero-sub" style="animation: fadeInUp 0.8s 0.75s ease both; opacity:0;">
+    <p class="hero-sub" data-content="hero.subheadline" style="animation: fadeInUp 0.8s 0.75s ease both; opacity:0;">
       We partner with CEOs and Senior Executive teams to plan, communicate, and land complex organizational change. Backed by data, executed without leakage.
     </p>
 
     <div class="hero-actions" style="animation: fadeInUp 0.8s 0.95s ease both; opacity:0;">
-      <a href="/contact.html" class="btn-pill btn-pill-light btn-magnetic">Schedule a Consultation</a>
-      <a href="/methodology.html" class="btn-pill btn-pill-ghost btn-magnetic">See How We Work →</a>
+      <a href="/contact.html" class="btn-pill btn-pill-light btn-magnetic" data-content="hero.cta1">Schedule a Consultation</a>
+      <a href="/methodology.html" class="btn-pill btn-pill-ghost btn-magnetic" data-content="hero.cta2">See How We Work →</a>
     </div>
 
     <!-- Marquee -->
@@ -354,18 +354,18 @@
   <div class="cred-strip">
     <div class="cred-quote">
       <span class="cred-qmark">"</span>
-      <p class="cred-quote-text">
+      <p class="cred-quote-text" data-content-html="credibilityStrip.quote">
         "Niruja supported HR work for a complex amalgamation project that I was leading. She was knowledgeable, organized, hard-working, flexible and decisive. She had an excellent ability of quickly assessing needs and was always solution-oriented. She always brought relevant recommendations to the decision-makers and delivered work on time while navigating changing project circumstances (as they always do). I appreciated her ongoing communication throughout the project and her risk assessment and mitigation approach."
         — <strong>Joanie Bouchard</strong>, Chief Transformation Officer
       </p>
     </div>
     <div class="cred-divider"></div>
     <div class="cred-tags">
-      <span class="cred-tag">Financial Services</span>
-      <span class="cred-tag">Healthcare</span>
-      <span class="cred-tag">Technology</span>
-      <span class="cred-tag">Education</span>
-      <span class="cred-tag">Pharma</span>
+      <span class="cred-tag" data-content="credibilityStrip.tag1">Financial Services</span>
+      <span class="cred-tag" data-content="credibilityStrip.tag2">Healthcare</span>
+      <span class="cred-tag" data-content="credibilityStrip.tag3">Technology</span>
+      <span class="cred-tag" data-content="credibilityStrip.tag4">Education</span>
+      <span class="cred-tag" data-content="credibilityStrip.tag5">Pharma</span>
     </div>
   </div>
 
@@ -374,13 +374,13 @@
   <!-- ── BOLD STATEMENT ────────────────────────────────────────── -->
   <div class="stmt-split">
     <div class="stmt-split-text">
-      <p class="stmt-problem-tag reveal">The Problem</p>
-      <div class="stmt-line-1 reveal reveal-d1">Most strategies don't fail at the top.</div>
-      <div class="stmt-line-2 reveal reveal-d2">They leak in the middle.</div>
-      <p class="stmt-body reveal reveal-d3">
+      <p class="stmt-problem-tag reveal" data-content="statement.sectionTag">The Problem</p>
+      <div class="stmt-line-1 reveal reveal-d1" data-content="statement.line1">Most strategies don't fail at the top.</div>
+      <div class="stmt-line-2 reveal reveal-d2" data-content="statement.line2">They leak in the middle.</div>
+      <p class="stmt-body reveal reveal-d3" data-content="statement.body">
         Adjacent Hustle was built for what happens between the board decision and the teams execution. Where strategy dissolves into ambiguity, conflicting priorities, and human friction.
       </p>
-      <a href="/methodology.html" class="btn-primary btn-magnetic reveal reveal-d4">See How We Fix It →</a>
+      <a href="/methodology.html" class="btn-primary btn-magnetic reveal reveal-d4" data-content="statement.cta">See How We Fix It →</a>
     </div>
     <div class="stmt-split-img reveal reveal-d1">
       <img
@@ -389,9 +389,9 @@
         loading="lazy"
       />
       <div class="stmt-stat-card">
-        <div class="stmt-stat-num">87<em>%</em></div>
-        <p class="stmt-stat-label">of change initiatives fail to meet their objectives</p>
-        <p class="stmt-stat-source">Prosci Research</p>
+        <div class="stmt-stat-num" data-content-html="statement.statNumber">87<em>%</em></div>
+        <p class="stmt-stat-label" data-content="statement.statLabel">of change initiatives fail to meet their objectives</p>
+        <p class="stmt-stat-source" data-content="statement.statSource">Prosci Research</p>
       </div>
     </div>
   </div>
@@ -400,10 +400,10 @@
   <section class="svc-list-section">
     <div class="svc-list-header">
       <div>
-        <div class="section-tag reveal">What We Do</div>
-        <h2 class="reveal reveal-d1">Services built for<br>transformation.</h2>
+        <div class="section-tag reveal" data-content="services.sectionTag">What We Do</div>
+        <h2 class="reveal reveal-d1" data-content="services.headline">Services built for<br>transformation.</h2>
       </div>
-      <p class="lead reveal reveal-d2" style="max-width:340px; font-size:16px;">
+      <p class="lead reveal reveal-d2" data-content="services.subheadline" style="max-width:340px; font-size:16px;">
         We handle the organizational work that requires both strategic clarity and the operational discipline to execute. Under real pressure, on real timelines.
       </p>
     </div>
@@ -412,56 +412,56 @@
       <div class="svc-row reveal">
         <span class="svc-n">01</span>
         <div class="svc-info">
-          <h3>Organizational Design &amp; Effectiveness</h3>
-          <p>Design and operationalize models that work.</p>
+          <h3 data-content="services.item1.title">Organizational Design &amp; Effectiveness</h3>
+          <p data-content="services.item1.desc">Design and land operating models that work.</p>
         </div>
         <div class="svc-arrow">→</div>
       </div>
       <div class="svc-row reveal reveal-d1">
         <span class="svc-n">02</span>
         <div class="svc-info">
-          <h3>People Operations</h3>
-          <p>Operational rigor for the people side.</p>
+          <h3 data-content="services.item2.title">People Operations</h3>
+          <p data-content="services.item2.desc">Operational rigor for the people side.</p>
         </div>
         <div class="svc-arrow">→</div>
       </div>
       <div class="svc-row reveal reveal-d2">
         <span class="svc-n">03</span>
         <div class="svc-info">
-          <h3>Change and Transformation</h3>
-          <p>Comprehensive change delivery so transformation lands cleanly at every level.</p>
+          <h3 data-content="services.item3.title">Change and Transformation</h3>
+          <p data-content="services.item3.desc">Comprehensive change delivery so transformation lands cleanly at every level.</p>
         </div>
         <div class="svc-arrow">→</div>
       </div>
       <div class="svc-row reveal reveal-d3">
         <span class="svc-n">04</span>
         <div class="svc-info">
-          <h3>M&amp;A Integration</h3>
-          <p>Bring stability and structure to complex integrations and divestitures</p>
+          <h3 data-content="services.item4.title">M&amp;A Integration</h3>
+          <p data-content="services.item4.desc">Bring stability and structure to complex integrations and divestitures</p>
         </div>
         <div class="svc-arrow">→</div>
       </div>
       <div class="svc-row reveal reveal-d4">
         <span class="svc-n">05</span>
         <div class="svc-info">
-          <h3>Executive Advisory</h3>
-          <p>Data-driven decision support: scenario modeling, risk flags, and sequenced next steps</p>
+          <h3 data-content="services.item5.title">Executive Advisory</h3>
+          <p data-content="services.item5.desc">Data-driven decision support: scenario modeling, risk flags, and sequenced next steps</p>
         </div>
         <div class="svc-arrow">→</div>
       </div>
       <div class="svc-row reveal reveal-d5">
         <span class="svc-n">06</span>
         <div class="svc-info">
-          <h3>Fractional Leadership</h3>
-          <p>Stabilize today and build future operating systems that sustain beyond the engagement</p>
+          <h3 data-content="services.item6.title">Fractional Leadership</h3>
+          <p data-content="services.item6.desc">Stabilize today and build future operating systems that sustain beyond the engagement</p>
         </div>
         <div class="svc-arrow">→</div>
       </div>
       <div class="svc-row reveal reveal-d5">
         <span class="svc-n">07</span>
         <div class="svc-info">
-          <h3>Workshops for Change Leaders</h3>
-          <p>Build and refine capabilities in your change leaders</p>
+          <h3 data-content="services.item7.title">Workshops for Change Leaders</h3>
+          <p data-content="services.item7.desc">Build and refine capabilities in your change leaders</p>
         </div>
         <div class="svc-arrow">→</div>
       </div>
@@ -471,50 +471,76 @@
   <!-- ── IMPACT NUMBERS ────────────────────────────────────────── -->
   <div class="impact-strip">
     <div class="impact-item reveal">
-      <span class="impact-num impact-num-teal">15+</span>
-      <p class="impact-label">Years tackling organizational transformation</p>
+      <span class="impact-num impact-num-teal" data-content="impact.stat1Number">15+</span>
+      <p class="impact-label" data-content="impact.stat1Label">Years tackling organizational transformation</p>
     </div>
     <div class="impact-item reveal reveal-d2">
-      <span class="impact-num impact-num-purple">25+</span>
-      <p class="impact-label">Enterprise programs delivered</p>
+      <span class="impact-num impact-num-purple" data-content="impact.stat2Number">25+</span>
+      <p class="impact-label" data-content="impact.stat2Label">Enterprise programs delivered</p>
     </div>
     <div class="impact-item reveal reveal-d4">
-      <span class="impact-num impact-num-white">6+</span>
-      <p class="impact-label">Industries navigated: Finance · Tech · Health · Education · Pharma · Not-For-Profit</p>
+      <span class="impact-num impact-num-white" data-content="impact.stat3Number">6+</span>
+      <p class="impact-label" data-content="impact.stat3Label">Industries navigated: Finance · Tech · Health · Education · Pharma · Not-For-Profit</p>
     </div>
   </div>
+
+  <!-- ── FOUNDER PREVIEW ───────────────────────────────────────── -->
+  <section style="background: var(--gray-50);">
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal" style="position: relative;">
+        <div class="photo-frame">
+          <img
+            src="/niruja.jpg"
+            alt="Niruja Nagarajah — CEO, Adjacent Hustle Consulting Inc."
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="section-tag reveal" data-content="founder.sectionTag">The Founder</div>
+        <p class="lead reveal reveal-d1" data-content="founder.quote" style="max-width: 520px;">
+          "I built Adjacent Hustle because the gap between board decisions and the people leading them was too wide, and too costly, to leave unmanaged."
+        </p>
+        <h2 class="reveal reveal-d2" data-content="founder.name" style="margin-top: 12px;">Niruja Nagarajah</h2>
+        <p class="reveal reveal-d3" data-content="founder.role" style="color: var(--gray-600); margin-bottom: 24px;">
+          CEO · Principal Consultant · Facilitator
+        </p>
+        <a href="/about.html" class="btn-ghost reveal reveal-d4" data-content="founder.cta">Meet Niruja <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
 
   <!-- ── METHODOLOGY TEASER ────────────────────────────────────── -->
   <section class="method-teaser-section">
     <div>
-      <div class="section-tag reveal">The Adjacent Method</div>
-      <h2 class="reveal reveal-d1">Organizational architecture.<br>Not soft HR support.</h2>
-      <p class="lead reveal reveal-d2" style="margin-bottom:36px;">
+      <div class="section-tag reveal" data-content="methodologyTeaser.sectionTag">The Adjacent Method</div>
+      <h2 class="reveal reveal-d1" data-content="methodologyTeaser.headline">Organizational architecture.<br>Not soft HR support.</h2>
+      <p class="lead reveal reveal-d2" data-content="methodologyTeaser.subheadline" style="margin-bottom:36px;">
         Five structured phases. A forensic data model at the center. Every decision mapped, sequenced, and executed with zero operational leakage.
       </p>
-      <a href="/methodology.html" class="btn-primary btn-magnetic reveal reveal-d3">See the Full Methodology →</a>
+      <a href="/methodology.html" class="btn-primary btn-magnetic reveal reveal-d3" data-content="methodologyTeaser.cta">See the Full Methodology →</a>
     </div>
 
     <div class="teaser-phases reveal reveal-d1">
       <div class="teaser-phase-row">
         <span class="tp-n">01</span>
-        <div><div class="tp-t">Strategic Synthesis &amp; Definition</div><div class="tp-d">Executive intent → concrete Target Operating Model.</div></div>
+        <div><div class="tp-t" data-content="methodologyTeaser.phase1.title">Strategic Synthesis &amp; Definition</div><div class="tp-d" data-content="methodologyTeaser.phase1.desc">Executive intent → concrete Target Operating Model.</div></div>
       </div>
       <div class="teaser-phase-row">
         <span class="tp-n">02</span>
-        <div><div class="tp-t">The Data Blueprint</div><div class="tp-d">Timestamped, forensic talent audit and future-state modeling, down to every role.</div></div>
+        <div><div class="tp-t" data-content="methodologyTeaser.phase2.title">The Data Blueprint</div><div class="tp-d" data-content="methodologyTeaser.phase2.desc">Timestamped, forensic talent audit and future-state modeling, down to every role.</div></div>
       </div>
       <div class="teaser-phase-row">
         <span class="tp-n">03</span>
-        <div><div class="tp-t">Resource &amp; Skill Alignment</div><div class="tp-d">Specific skills, not job titles, mapped to the future state.</div></div>
+        <div><div class="tp-t" data-content="methodologyTeaser.phase3.title">Resource &amp; Skill Alignment</div><div class="tp-d" data-content="methodologyTeaser.phase3.desc">Specific skills, not job titles, mapped to the future state.</div></div>
       </div>
       <div class="teaser-phase-row">
         <span class="tp-n">04</span>
-        <div><div class="tp-t">Tactical Sequencing</div><div class="tp-d">We don't suggest meetings. We book the calendars.</div></div>
+        <div><div class="tp-t" data-content="methodologyTeaser.phase4.title">Tactical Sequencing</div><div class="tp-d" data-content="methodologyTeaser.phase4.desc">We don't suggest meetings. We book the calendars.</div></div>
       </div>
       <div class="teaser-phase-row">
         <span class="tp-n">05</span>
-        <div><div class="tp-t">Operational Integrity &amp; Governance</div><div class="tp-d">Single Source of Truth maintained throughout. Zero friction at landing.</div></div>
+        <div><div class="tp-t" data-content="methodologyTeaser.phase5.title">Operational Integrity &amp; Governance</div><div class="tp-d" data-content="methodologyTeaser.phase5.desc">Single Source of Truth maintained throughout. Zero friction at landing.</div></div>
       </div>
     </div>
   </section>
@@ -523,7 +549,7 @@
   <div class="big-testimonial">
     <div class="big-quote-mark">"</div>
     <div class="reveal">
-      <p class="big-test-quote">
+      <p class="big-test-quote" data-content="testimonial.quote">
         "Niruja brings a rare combination of deep human capital expertise and pragmatic change leadership. She has a strong ability to quickly understand complex organizational contexts and translate strategy into clear, actionable solutions that leaders can actually execute. Whether working with executives on transformation priorities or partnering with teams through periods of ambiguity, Niruja consistently brings clarity, structure, and calm.
 
 What truly distinguishes Niruja is her systems-level thinking paired with a genuine, human-centered approach. She asks the right questions, challenges assumptions thoughtfully, and ensures that people, performance, and culture are always considered together—not in isolation. Clients trust her quickly, and colleagues value her judgment, integrity, and collaborative style.
@@ -531,8 +557,8 @@ What truly distinguishes Niruja is her systems-level thinking paired with a genu
 I would highly recommend Niruja to any organization seeking a trusted advisor in transformation, organizational effectiveness and design."
       </p>
       <div class="big-test-meta">
-        <span class="big-test-author">Karen Calder</span>
-        <span class="big-test-role">Senior Advisor, The Poirier Group</span>
+        <span class="big-test-author" data-content="testimonial.author">Karen Calder</span>
+        <span class="big-test-role" data-content="testimonial.role">Senior Advisor, The Poirier Group</span>
       </div>
     </div>
   </div>
@@ -552,9 +578,9 @@ I would highly recommend Niruja to any organization seeking a trusted advisor in
       <div class="section-tag" style="justify-content:center; color: var(--teal-light);">
         Ready to start?
       </div>
-      <h2 data-split data-split-delay="0.05">Bring order to the chaos.</h2>
-      <p>If you're navigating something complex and need a trusted partner who has done this before—let's talk.</p>
-      <a href="/contact.html" class="btn-pill btn-pill-light btn-magnetic">Schedule a Discovery Call</a>
+      <h2 data-split data-split-delay="0.05" data-content="cta.headline">Bring order to the chaos.</h2>
+      <p data-content="cta.body">If you're navigating something complex and need a trusted partner who has done this before—let's talk.</p>
+      <a href="/contact.html" class="btn-pill btn-pill-light btn-magnetic" data-content="cta.cta">Schedule a Discovery Call</a>
     </div>
   </div>
 
@@ -567,7 +593,7 @@ I would highly recommend Niruja to any organization seeking a trusted advisor in
         <path d="M18 23 L25 14 L32 23 L25 32 Z" fill="white" opacity="0.5"/>
         <defs><linearGradient id="fg" x1="0" y1="0" x2="46" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2BB5B5"/><stop offset="50%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#0F2251"/></linearGradient></defs>
       </svg>
-      <div class="logo-text-block"><span class="logo-company">Adjacent Hustle</span><span class="logo-tag">Consulting Inc.</span></div>
+      <div class="logo-text-block"><span class="logo-company" data-global="nav.logoName">Adjacent Hustle</span><span class="logo-tag">Consulting Inc.</span></div>
     </a>
     <ul class="footer-links">
       <li><a href="/methodology.html">Our Approach</a></li>
@@ -575,7 +601,7 @@ I would highly recommend Niruja to any organization seeking a trusted advisor in
       <li><a href="/contact.html">Contact</a></li>
       <li><a href="/careers.html">Careers</a></li>
     </ul>
-    <span class="footer-copy">© 2026 Adjacent Hustle Consulting Inc.</span>
+    <span class="footer-copy" data-global="footer.copyright">© 2026 Adjacent Hustle Consulting Inc.</span>
   </footer>
 
   <script type="module" src="/src/shared.js"></script>

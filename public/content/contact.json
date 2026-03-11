@@ -1,0 +1,16 @@
+{
+  "header": {
+    "sectionTag": "Get In Touch",
+    "headline": "Ready to bring order to the chaos?",
+    "lead": "Whether you're mid-restructure, planning an M&A, or staring down a complex reorg, the first conversation is a no-pressure 30-minute discovery call.",
+    "email": "niruja@adjacenthustle.com"
+  },
+  "whatToExpect": {
+    "label": "What to expect",
+    "step1": "<strong>Submit your details</strong> and book a Discovery call",
+    "step2": "<strong>Discovery call</strong> — no pitch deck, just an honest conversation about what you're navigating."
+  },
+  "form": {
+    "submitBtn": "Send Message →"
+  }
+}

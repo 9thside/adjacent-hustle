@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "sectionTag": "Careers",
+    "headline1": "Work that's worth",
+    "headline2": "showing up for.",
+    "lead": "We work on the hardest organizational challenges in the room—M&A integrations, workforce restructuring, large-scale transformations. If that kind of complexity excites you rather than intimidates you, you'd fit right in."
+  },
+  "culture": {
+    "sectionTag": "What It's Like to Work Here",
+    "headline": "Built for consultants who want to actually do the work.",
+    "p1": {
+      "title": "Real complexity, not PowerPoint strategy",
+      "desc": "We get embedded in the work—forensic data models, communication plans, cross-functional workstream management. You won't be asked to fill decks."
+    },
+    "p2": {
+      "title": "Contract-first, flexibility-forward",
+      "desc": "We work on engagement-based contracts. You bring expertise when it's needed, on timelines that respect your life. No performative presenteeism."
+    },
+    "p3": {
+      "title": "Direct access to decision-makers",
+      "desc": "You'll sit across from CFOs and COOs, not middle managers. When you have a recommendation, it gets heard by the person who can act on it."
+    },
+    "p4": {
+      "title": "Evidence over instinct",
+      "desc": "We build the database first. If you love turning people data into structural insight, this is the environment where that skill gets used—not sidelined."
+    },
+    "p5": {
+      "title": "Small team, high trust",
+      "desc": "Adjacent Hustle runs lean by design. That means real ownership, real impact, and a direct relationship with the work you deliver—no layers, no credit dilution."
+    },
+    "p6": {
+      "title": "Industries that matter to you",
+      "desc": "Financial services, healthcare, technology, pharma, education—our clients span sectors. You bring the discipline; we bring the breadth."
+    }
+  },
+  "roles": {
+    "sectionTag": "Open Roles",
+    "headline": "Always-On Opportunities.",
+    "r1": {
+      "title": "Senior Change Management Consultant",
+      "desc": "Lead change strategy and execution across complex organizational transformations. You'll design and deliver communications plans, manager readiness programs, and stakeholder engagement frameworks—working directly with C-suite clients on high-stakes programs."
+    },
+    "r2": {
+      "title": "HR Project Manager",
+      "desc": "Own the operational backbone of large-scale HR programs—workstream tracking, cross-functional coordination, risk registers, and executive reporting. You're the person who keeps every track moving without anyone having to ask twice."
+    },
+    "r3": {
+      "title": "People Analytics Specialist",
+      "desc": "Build the data models that power our engagements. You'll work with HRIS exports, headcount data, and org mapping tools to create the forensic talent blueprints our clients make decisions from. Excel mastery and an eye for structural insight are essential."
+    }
+  },
+  "generalApp": {
+    "sectionTag": "Don't see your role?",
+    "headline": "Send us a general application.",
+    "body": "If you have deep HR, change management, or organizational design expertise and want to work on engagements that actually challenge you—we want to hear from you.",
+    "cta": "Send Your Application →"
+  }
+}

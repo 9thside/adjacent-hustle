@@ -55,8 +55,8 @@
     <a href="/" class="nav-logo">
       <svg width="44" height="44" viewBox="0 0 46 46" fill="none"><rect width="46" height="46" rx="10" fill="url(#lg1)"/><path d="M14 23 L21 14 L28 23 L21 32 Z" fill="white" opacity="0.9"/><path d="M18 23 L25 14 L32 23 L25 32 Z" fill="white" opacity="0.5"/><path d="M21 18 L25 14 L28 18 L25 22 Z" fill="white" opacity="0.35"/><defs><linearGradient id="lg1" x1="0" y1="0" x2="46" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2BB5B5"/><stop offset="50%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#0F2251"/></linearGradient></defs></svg>
       <div class="logo-text-block">
-        <span class="logo-company">Adjacent Hustle</span>
-        <span class="logo-tag">Org Design · Change Management · Transformation</span>
+        <span class="logo-company" data-global="nav.logoName">Adjacent Hustle</span>
+        <span class="logo-tag" data-global="nav.logoTag">Org Design · Change Management · Transformation</span>
       </div>
     </a>
     <ul class="nav-links">
@@ -72,30 +72,30 @@
 
       <!-- Left: info -->
       <div>
-        <div class="section-tag reveal" style="color: var(--teal-light);">
+        <div class="section-tag reveal" data-content="header.sectionTag" style="color: var(--teal-light);">
           <span style="background: var(--teal-light);"></span>Get In Touch
         </div>
-        <h2 class="reveal reveal-d1" style="color: var(--white);">Ready to bring order<br>to the chaos?</h2>
-        <p class="lead reveal reveal-d2" style="color: rgba(255,255,255,0.65); max-width: 440px;">Whether you're mid-restructure, planning an M&amp;A, or staring down a complex reorg, the first conversation is a no-pressure 30-minute discovery call.</p>
+        <h2 class="reveal reveal-d1" data-content-html="header.headline" style="color: var(--white);">Ready to bring order<br>to the chaos?</h2>
+        <p class="lead reveal reveal-d2" data-content="header.lead" style="color: rgba(255,255,255,0.65); max-width: 440px;">Whether you're mid-restructure, planning an M&amp;A, or staring down a complex reorg, the first conversation is a no-pressure 30-minute discovery call.</p>
 
         <div class="contact-item reveal reveal-d4">
           <div class="ci-icon">✉️</div>
           <div>
             <span class="ci-label">Email</span>
-            <a href="mailto:niruja@adjacenthustle.com" class="ci-value" style="color: var(--white);">niruja@adjacenthustle.com</a>
+            <a href="mailto:niruja@adjacenthustle.com" class="ci-value" data-content="header.email" style="color: var(--white);">niruja@adjacenthustle.com</a>
           </div>
         </div>
 
         <!-- What to expect -->
         <div class="what-to-expect reveal reveal-d5">
-          <span class="expect-label">What to expect</span>
+          <span class="expect-label" data-content="whatToExpect.label">What to expect</span>
           <div class="expect-item">
             <div class="expect-num">1</div>
-            <div class="expect-text"><strong>Submit your details</strong> and book a Discovery call</div>
+            <div class="expect-text" data-content-html="whatToExpect.step1"><strong>Submit your details</strong> and book a Discovery call</div>
           </div>
           <div class="expect-item">
             <div class="expect-num">2</div>
-            <div class="expect-text"><strong>Discovery call</strong> — no pitch deck, just an honest conversation about what you're navigating.</div>
+            <div class="expect-text" data-content-html="whatToExpect.step2"><strong>Discovery call</strong> — no pitch deck, just an honest conversation about what you're navigating.</div>
           </div>
         </div>
       </div>
@@ -144,7 +144,7 @@
             <textarea id="message" name="message" placeholder="Brief overview of what you're navigating..."
               style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); color: white;"></textarea>
           </div>
-          <button type="submit" class="btn-submit" style="background: var(--teal);">Send Message →</button>
+          <button type="submit" class="btn-submit" data-content="form.submitBtn" style="background: var(--teal);">Send Message →</button>
         </form>
       </div>
 
@@ -155,7 +155,7 @@
   <footer>
     <a href="/" class="nav-logo footer-logo">
       <svg width="34" height="34" viewBox="0 0 46 46" fill="none"><rect width="46" height="46" rx="10" fill="url(#lg2)"/><path d="M14 23 L21 14 L28 23 L21 32 Z" fill="white" opacity="0.9"/><path d="M18 23 L25 14 L32 23 L25 32 Z" fill="white" opacity="0.5"/><path d="M21 18 L25 14 L28 18 L25 22 Z" fill="white" opacity="0.35"/><defs><linearGradient id="lg2" x1="0" y1="0" x2="46" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#2BB5B5"/><stop offset="50%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#0F2251"/></linearGradient></defs></svg>
-      <div class="logo-text-block"><span class="logo-company">Adjacent Hustle</span><span class="logo-tag">Consulting Inc.</span></div>
+      <div class="logo-text-block"><span class="logo-company" data-global="nav.logoName">Adjacent Hustle</span><span class="logo-tag">Consulting Inc.</span></div>
     </a>
     <ul class="footer-links">
       <li><a href="/methodology.html">Our Approach</a></li>
@@ -163,7 +163,7 @@
       <li><a href="/contact.html">Contact</a></li>
       <li><a href="/careers.html">Careers</a></li>
     </ul>
-    <span class="footer-copy">© 2026 Adjacent Hustle Consulting Inc.</span>
+    <span class="footer-copy" data-global="footer.copyright">© 2026 Adjacent Hustle Consulting Inc.</span>
   </footer>
 
   <script type="module" src="/src/shared.js"></script>

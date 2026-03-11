@@ -21,3 +21,9 @@
   from = "/careers"
   to   = "/careers.html"
   status = 200
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    Content-Security-Policy = "frame-ancestors 'self'"

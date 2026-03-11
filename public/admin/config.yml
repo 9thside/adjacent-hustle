@@ -1,0 +1,467 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home Page
+        file: public/content/index.json
+        format: json
+        fields:
+          - label: Hero Section
+            name: hero
+            widget: object
+            fields:
+              - {label: Eyebrow Text, name: eyebrow, widget: string, hint: "Small text above headline"}
+              - {label: Headline, name: headline, widget: string}
+              - {label: Subheadline, name: subheadline, widget: text}
+              - {label: Primary CTA Button, name: cta1, widget: string}
+              - {label: Secondary CTA Button, name: cta2, widget: string}
+          - label: Credibility Strip
+            name: credibilityStrip
+            widget: object
+            fields:
+              - {label: Quote Text, name: quote, widget: text}
+              - {label: Attribution Name, name: attribution, widget: string}
+              - {label: Attribution Role, name: attributionRole, widget: string}
+              - {label: Industry Tag 1, name: tag1, widget: string}
+              - {label: Industry Tag 2, name: tag2, widget: string}
+              - {label: Industry Tag 3, name: tag3, widget: string}
+              - {label: Industry Tag 4, name: tag4, widget: string}
+              - {label: Industry Tag 5, name: tag5, widget: string}
+          - label: Statement Section
+            name: statement
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: "Line 1 (faded)", name: line1, widget: string}
+              - {label: "Line 2 (bold)", name: line2, widget: string}
+              - {label: Body Text, name: body, widget: text}
+              - {label: CTA Button, name: cta, widget: string}
+              - {label: Stat Number, name: statNumber, widget: string}
+              - {label: Stat Label, name: statLabel, widget: string}
+              - {label: Stat Source, name: statSource, widget: string}
+          - label: Services Section
+            name: services
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline, name: headline, widget: string}
+              - {label: Subheadline, name: subheadline, widget: text}
+              - label: Service 1
+                name: item1
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: string}
+              - label: Service 2
+                name: item2
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: string}
+              - label: Service 3
+                name: item3
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: string}
+              - label: Service 4
+                name: item4
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: string}
+              - label: Service 5
+                name: item5
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: string}
+              - label: Service 6
+                name: item6
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: string}
+              - label: Service 7
+                name: item7
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: string}
+          - label: Impact Numbers
+            name: impact
+            widget: object
+            fields:
+              - {label: Stat 1 Number, name: stat1Number, widget: string}
+              - {label: Stat 1 Label, name: stat1Label, widget: string}
+              - {label: Stat 2 Number, name: stat2Number, widget: string}
+              - {label: Stat 2 Label, name: stat2Label, widget: string}
+              - {label: Stat 3 Number, name: stat3Number, widget: string}
+              - {label: Stat 3 Label, name: stat3Label, widget: string}
+          - label: Founder Preview
+            name: founder
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Quote, name: quote, widget: text}
+              - {label: Name, name: name, widget: string}
+              - {label: Role, name: role, widget: string}
+              - {label: CTA Button, name: cta, widget: string}
+          - label: Methodology Teaser
+            name: methodologyTeaser
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline, name: headline, widget: string}
+              - {label: Subheadline, name: subheadline, widget: text}
+              - {label: CTA Button, name: cta, widget: string}
+              - label: Phase 1
+                name: phase1
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: string}
+              - label: Phase 2
+                name: phase2
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: string}
+              - label: Phase 3
+                name: phase3
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: string}
+              - label: Phase 4
+                name: phase4
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: string}
+              - label: Phase 5
+                name: phase5
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: string}
+          - label: Testimonial
+            name: testimonial
+            widget: object
+            fields:
+              - {label: Quote, name: quote, widget: text}
+              - {label: Author Name, name: author, widget: string}
+              - {label: Author Role, name: role, widget: string}
+          - label: Bottom CTA Section
+            name: cta
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline, name: headline, widget: string}
+              - {label: Body Text, name: body, widget: text}
+              - {label: Button Text, name: cta, widget: string}
+
+      - name: about
+        label: About Page
+        file: public/content/about.json
+        format: json
+        fields:
+          - label: Page Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline Line 1, name: headline1, widget: string}
+              - {label: "Headline Line 2 (gradient)", name: headline2, widget: string}
+              - {label: Lead Text, name: lead, widget: text}
+          - label: Founder Bio
+            name: founder
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Name, name: name, widget: string}
+              - {label: Bio Paragraph, name: bio, widget: text}
+              - {label: Badge Role, name: badgeRole, widget: string}
+              - {label: Industry Tag 1, name: ind1, widget: string}
+              - {label: Industry Tag 2, name: ind2, widget: string}
+              - {label: Industry Tag 3, name: ind3, widget: string}
+              - {label: Industry Tag 4, name: ind4, widget: string}
+              - {label: Industry Tag 5, name: ind5, widget: string}
+              - {label: Industry Tag 6, name: ind6, widget: string}
+          - label: Testimonial
+            name: testimonial
+            widget: object
+            fields:
+              - {label: Quote, name: quote, widget: text}
+              - {label: Author Name, name: author, widget: string}
+              - {label: Author Role, name: role, widget: string}
+          - label: Values Section
+            name: values
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline, name: headline, widget: string}
+              - label: Value 1
+                name: v1
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+              - label: Value 2
+                name: v2
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+              - label: Value 3
+                name: v3
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+              - label: Value 4
+                name: v4
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+              - label: Value 5
+                name: v5
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+              - label: Value 6
+                name: v6
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+          - label: Name Explainer
+            name: nameExplainer
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Body Text, name: body, widget: text}
+              - {label: Blockquote, name: blockquote, widget: text}
+          - label: Bottom CTA
+            name: cta
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline, name: headline, widget: string}
+              - {label: Lead Text, name: lead, widget: text}
+              - {label: Button Text, name: cta, widget: string}
+
+      - name: methodology
+        label: Methodology Page
+        file: public/content/methodology.json
+        format: json
+        fields:
+          - label: Page Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline Line 1, name: headline1, widget: string}
+              - {label: "Headline Line 2 (gradient)", name: headline2, widget: string}
+              - {label: Lead Text, name: lead, widget: text}
+          - label: Intro Section
+            name: intro
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline, name: headline, widget: string}
+              - {label: Lead Text, name: lead, widget: text}
+          - label: Phase 1
+            name: phase1
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: desc, widget: text}
+          - label: Phase 2
+            name: phase2
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: desc, widget: text}
+          - label: "Phase 3 — The Data Blueprint"
+            name: phase3
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: desc, widget: text}
+              - {label: Bullet 1 Title, name: bullet1Title, widget: string}
+              - {label: Bullet 1 Text, name: bullet1Text, widget: string}
+              - {label: Bullet 2 Title, name: bullet2Title, widget: string}
+              - {label: Bullet 2 Text, name: bullet2Text, widget: string}
+              - {label: Bullet 3 Title, name: bullet3Title, widget: string}
+              - {label: Bullet 3 Text, name: bullet3Text, widget: string}
+          - label: Phase 4
+            name: phase4
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: desc, widget: text}
+              - {label: Bullet 1 Title, name: bullet1Title, widget: string}
+              - {label: Bullet 1 Text, name: bullet1Text, widget: string}
+              - {label: Bullet 2 Title, name: bullet2Title, widget: string}
+              - {label: Bullet 2 Text, name: bullet2Text, widget: string}
+          - label: Phase 5
+            name: phase5
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: desc, widget: text}
+          - label: Pull Quote
+            name: pullquote
+            widget: object
+            fields:
+              - {label: Quote Text, name: text, widget: string}
+          - label: Bottom CTA
+            name: cta
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline, name: headline, widget: string}
+              - {label: Lead Text, name: lead, widget: text}
+              - {label: Button Text, name: cta, widget: string}
+
+      - name: contact
+        label: Contact Page
+        file: public/content/contact.json
+        format: json
+        fields:
+          - label: Header
+            name: header
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline, name: headline, widget: string}
+              - {label: Lead Text, name: lead, widget: text}
+              - {label: Email Address, name: email, widget: string}
+          - label: What to Expect
+            name: whatToExpect
+            widget: object
+            fields:
+              - {label: Label, name: label, widget: string}
+              - {label: Step 1 Text, name: step1, widget: string}
+              - {label: Step 2 Text, name: step2, widget: string}
+          - label: Form
+            name: form
+            widget: object
+            fields:
+              - {label: Submit Button Text, name: submitBtn, widget: string}
+
+      - name: careers
+        label: Careers Page
+        file: public/content/careers.json
+        format: json
+        fields:
+          - label: Page Hero
+            name: hero
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline Line 1, name: headline1, widget: string}
+              - {label: "Headline Line 2 (gradient)", name: headline2, widget: string}
+              - {label: Lead Text, name: lead, widget: text}
+          - label: Culture Section
+            name: culture
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline, name: headline, widget: string}
+              - label: Pillar 1
+                name: p1
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: text}
+              - label: Pillar 2
+                name: p2
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: text}
+              - label: Pillar 3
+                name: p3
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: text}
+              - label: Pillar 4
+                name: p4
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: text}
+              - label: Pillar 5
+                name: p5
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: text}
+              - label: Pillar 6
+                name: p6
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: text}
+          - label: Open Roles Section
+            name: roles
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline, name: headline, widget: string}
+              - label: Role 1
+                name: r1
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: text}
+              - label: Role 2
+                name: r2
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: text}
+              - label: Role 3
+                name: r3
+                widget: object
+                fields:
+                  - {label: Title, name: title, widget: string}
+                  - {label: Description, name: desc, widget: text}
+          - label: General Application
+            name: generalApp
+            widget: object
+            fields:
+              - {label: Section Tag, name: sectionTag, widget: string}
+              - {label: Headline, name: headline, widget: string}
+              - {label: Body Text, name: body, widget: text}
+              - {label: Button Text, name: cta, widget: string}
+
+  - name: global
+    label: Global (Nav & Footer)
+    files:
+      - name: global
+        label: Navigation & Footer
+        file: public/content/global.json
+        format: json
+        fields:
+          - label: Navigation
+            name: nav
+            widget: object
+            fields:
+              - {label: Logo Name, name: logoName, widget: string}
+              - {label: Logo Tagline, name: logoTag, widget: string}
+              - {label: Nav Link 1 Text, name: link1, widget: string}
+              - {label: Nav Link 2 Text, name: link2, widget: string}
+              - {label: Nav CTA Text, name: ctaText, widget: string}
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - {label: Copyright Text, name: copyright, widget: string}

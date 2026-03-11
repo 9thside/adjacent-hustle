@@ -1,0 +1,114 @@
+{
+  "hero": {
+    "eyebrow": "Adjacent Hustle Consulting · Toronto, Canada",
+    "headline": "Turn transformation into clarity and execution.",
+    "subheadline": "We partner with CEOs and Senior Executive teams to plan, communicate, and land complex organizational change. Backed by data, executed without leakage.",
+    "cta1": "Schedule a Consultation",
+    "cta2": "See How We Work →"
+  },
+  "credibilityStrip": {
+    "quote": "\"Niruja supported HR work for a complex amalgamation project that I was leading. She was knowledgeable, organized, hard-working, flexible and decisive. She had an excellent ability of quickly assessing needs and was always solution-oriented. She always brought relevant recommendations to the decision-makers and delivered work on time while navigating changing project circumstances (as they always do). I appreciated her ongoing communication throughout the project and her risk assessment and mitigation approach.\" — <strong>Joanie Bouchard</strong>, Chief Transformation Officer",
+    "attribution": "Joanie Bouchard",
+    "attributionRole": "Chief Transformation Officer",
+    "tag1": "Financial Services",
+    "tag2": "Healthcare",
+    "tag3": "Technology",
+    "tag4": "Education",
+    "tag5": "Pharma"
+  },
+  "statement": {
+    "sectionTag": "The Problem",
+    "line1": "Most strategies don't fail at the top.",
+    "line2": "They leak in the middle.",
+    "body": "Adjacent Hustle was built for what happens between the board decision and the teams execution. Where strategy dissolves into ambiguity, conflicting priorities, and human friction.",
+    "cta": "See How We Fix It →",
+    "statNumber": "87<em>%</em>",
+    "statLabel": "of change initiatives fail to meet their objectives",
+    "statSource": "Prosci Research"
+  },
+  "services": {
+    "sectionTag": "What We Do",
+    "headline": "Services built for transformation.",
+    "subheadline": "We handle the organizational work that requires both strategic clarity and the operational discipline to execute. Under real pressure, on real timelines.",
+    "item1": {
+      "title": "Organizational Design & Effectiveness",
+      "desc": "Design and land operating models that work."
+    },
+    "item2": {
+      "title": "People Operations",
+      "desc": "Operational rigor for the people side."
+    },
+    "item3": {
+      "title": "Change and Transformation",
+      "desc": "Comprehensive change delivery so transformation lands cleanly at every level."
+    },
+    "item4": {
+      "title": "M&A Integration",
+      "desc": "Bring stability and structure to complex integrations and divestitures"
+    },
+    "item5": {
+      "title": "Executive Advisory",
+      "desc": "Data-driven decision support: scenario modeling, risk flags, and sequenced next steps"
+    },
+    "item6": {
+      "title": "Fractional Leadership",
+      "desc": "Stabilize today and build future operating systems that sustain beyond the engagement"
+    },
+    "item7": {
+      "title": "Workshops for Change Leaders",
+      "desc": "Build and refine capabilities in your change leaders"
+    }
+  },
+  "impact": {
+    "stat1Number": "15+",
+    "stat1Label": "Years tackling organizational transformation",
+    "stat2Number": "25+",
+    "stat2Label": "Enterprise programs delivered",
+    "stat3Number": "6+",
+    "stat3Label": "Industries navigated: Finance · Tech · Health · Education · Pharma · Not-For-Profit"
+  },
+  "founder": {
+    "sectionTag": "The Founder",
+    "quote": "\"I built Adjacent Hustle because the gap between board decisions and the people leading them was too wide, and too costly, to leave unmanaged.\"",
+    "name": "Niruja Nagarajah",
+    "role": "CEO · Principal Consultant · Facilitator",
+    "cta": "Meet Niruja →"
+  },
+  "methodologyTeaser": {
+    "sectionTag": "The Adjacent Method",
+    "headline": "Organizational architecture. Not soft HR support.",
+    "subheadline": "Five structured phases. A forensic data model at the center. Every decision mapped, sequenced, and executed with zero operational leakage.",
+    "cta": "See the Full Methodology →",
+    "phase1": {
+      "title": "Strategic Synthesis & Definition",
+      "desc": "Executive intent → concrete Target Operating Model."
+    },
+    "phase2": {
+      "title": "The Data Blueprint",
+      "desc": "Timestamped, forensic talent audit and future-state modeling, down to every role."
+    },
+    "phase3": {
+      "title": "Resource & Skill Alignment",
+      "desc": "Specific skills, not job titles, mapped to the future state."
+    },
+    "phase4": {
+      "title": "Tactical Sequencing",
+      "desc": "We don't suggest meetings. We book the calendars."
+    },
+    "phase5": {
+      "title": "Operational Integrity & Governance",
+      "desc": "Single Source of Truth maintained throughout. Zero friction at landing."
+    }
+  },
+  "testimonial": {
+    "quote": "\"Niruja brings a rare combination of deep human capital expertise and pragmatic change leadership. She has a strong ability to quickly understand complex organizational contexts and translate strategy into clear, actionable solutions that leaders can actually execute. Whether working with executives on transformation priorities or partnering with teams through periods of ambiguity, Niruja consistently brings clarity, structure, and calm.\n\nWhat truly distinguishes Niruja is her systems-level thinking paired with a genuine, human-centered approach. She asks the right questions, challenges assumptions thoughtfully, and ensures that people, performance, and culture are always considered together—not in isolation. Clients trust her quickly, and colleagues value her judgment, integrity, and collaborative style.\n\nI would highly recommend Niruja to any organization seeking a trusted advisor in transformation, organizational effectiveness and design.\"",
+    "author": "Karen Calder",
+    "role": "Senior Advisor, The Poirier Group"
+  },
+  "cta": {
+    "sectionTag": "Ready to start?",
+    "headline": "Bring order to the chaos.",
+    "body": "If you're navigating something complex and need a trusted partner who has done this before—let's talk.",
+    "cta": "Schedule a Discovery Call"
+  }
+}
